@@ -35,10 +35,11 @@ h1{
   text-align: center;
 }
 
+h2,
 h3{
   margin-top: 6%;
   text-align: center;
-  color: var(--clr-white);
+  color: var(--clr-green);
 }
 
 hr{
