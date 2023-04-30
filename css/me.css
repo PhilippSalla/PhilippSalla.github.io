@@ -51,13 +51,14 @@ p{
 }
 
 a{
-  text-decoration: none;
   transition: 250ms;
+  color: inherit;
+  text-decoration: underline dashed;
 }
 
 a:hover,
 a:focus-within{
-  text-decoration: underline dashed;
+  text-decoration: underline double;
   color: var(--clr-green);
 }
 
@@ -109,7 +110,7 @@ i.underscore{
   margin: auto;
 }
 
-.profile-wrapper{
+.vert-center-container{
   width: 100%;
   height: fit-content;
   position: relative;
@@ -196,4 +197,20 @@ i.underscore{
   width: fit-content;
   margin: auto;
   margin-top: 3rem;
+}
+
+.descr-title{
+  padding-bottom: 1rem;
+}
+
+.title-clr-red{
+  color: var(--clr-red);
+}
+
+.title-clr-green{
+  color: var(--clr-green);
+}
+
+.title-clr-blue{
+  color: var(--clr-blue);
 }
