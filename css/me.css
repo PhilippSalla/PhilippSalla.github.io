@@ -62,7 +62,7 @@ a:focus-within{
 }
 
 i.underscore{
-  color: var(--clr-light) !important;
+  color: var(--clr-light);
   animation: ani-blank-inf 1s ease-in-out infinite;
 }
   
@@ -74,6 +74,16 @@ i.underscore{
   50% {
     opacity: 0;
   }
+}
+
+.background-image {
+  background-image: url("/media/portfolio/cpu.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
 }
 
 .flex-element{
