@@ -21,6 +21,7 @@ body{
   font-family: monospace;
   font-family: 'Comfortaa', cursive;
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 img{
@@ -36,8 +37,8 @@ h1{
 
 h3{
   margin-top: 6%;
-  color: var(--clr-green);
   text-align: center;
+  color: var(--clr-white);
 }
 
 hr{
@@ -197,6 +198,7 @@ i.underscore{
   width: fit-content;
   margin: auto;
   margin-top: 3rem;
+  color: var(--clr-green);
 }
 
 .descr-title{

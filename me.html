@@ -12,7 +12,7 @@
   <body>
 
     <!-- ME - element -->
-    <div class="main-element">
+    <div id="top" class="main-element">
 
       <!-- cpu background image -->
       <!-- <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Technology icons created by Freepik - Flaticon</a> -->
@@ -70,20 +70,28 @@
     </div>
 
     <!-- descr - element -->
-    <div class="main-element">
+    <div id="descr" class="main-element">
 
       <div class="center-75">
 
         <div class="vert-center-container">
 
 
-          <h3 class="descr-title"><i class="title-clr-blue"><</i> <i class="title-clr-red"> Me </i><i class="title-clr-green">/</i><i class="title-clr-blue">></i> </h3>
+          <h3 class="descr-title">
+            <a href="#top">
+              <i class="title-clr-blue"><</i> <i class="title-clr-red"> Me </i><i class="title-clr-green">/</i><i class="title-clr-blue">></i>
+            </a>
+          </h3>
           <!-- description container -->
           <div class="description-wrapper">
             <p>Since 2018 I have studied applied computer science at the <a href="https://www.uni-due.de/" title="redirect to university website">University of Duisburg-Essen</a>. I recieved my bachelor degree in 2023 in the department of <a href="https://vs-uni-due.de/" title="redirect to department website">distributed systems</a>. Now I am studying applied computer science with a focus on distributed systems for the master's degree.</p>
           </div>
 
-          <h3 class="descr-title"> <i class="title-clr-blue">def</i><i class="title-clr-green"> (</i> <i class="title-clr-red">Programming</i><i class="title-clr-green"> ) :</i></h3>
+          <h3 class="descr-title">
+            <a href="#langs">
+              <i class="title-clr-blue">def</i><i class="title-clr-green"> (</i> <i class="title-clr-red">Programming</i><i class="title-clr-green"> ) :</i>
+            </a>
+          </h3>
           <div class="description-wrapper">
             <p>During my studies I worked with various programming languages, both through lectures and private projects. It all started with <a href="https://www.java.com/de/" title="redirect to oracle/java">Java</a> before I started my studies. Through my studies I got to know <a href="https://www.python.org/" title="redirect to Python">Python</a> and continued to use it in private projects. Now I am most familiar with <a href="https://www.python.org/" title="redirect to Python">Python</a> as far as programming is concened. </p>
 
@@ -98,10 +106,23 @@
     </div>
 
     <!-- language table -->
-    <div class="main-element">
+    <div id="langs" class="main-element">
 
-      
+
     </div>
 
+
+    <script>
+      let $root = $('html, body');
+      $('a[href^="#"]').click(function () {
+        let href = $.attr(this, 'href');
+        $root.animate({
+          scrollTop: $(href).offset().top
+        }, 500, function () {
+          window.location.hash = href;
+        });
+        return false;
+      });
+    </script>
   </body>
 </html>
