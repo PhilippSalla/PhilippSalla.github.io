@@ -42,10 +42,8 @@ h3{
 
 hr{
   color: var(--clr-green);
-  max-width: 50%;
   margin: auto;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5rem;
 }
 
 p{
@@ -157,7 +155,6 @@ i.underscore{
   margin: auto;
   font-size: 1.25em;
   color: var(--clr-blue);
-  gap: 1em;
   margin-bottom: 8%;
   margin-top: 2%;
 }
@@ -180,4 +177,10 @@ i.underscore{
   line-height: 1.25em;
   font-size: 1.2em;
   text-indent: 1em;
+}
+
+.subtitle-container{
+  width: fit-content;
+  margin: auto;
+  margin-top: 3rem;
 }
