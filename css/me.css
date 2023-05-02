@@ -213,9 +213,9 @@ i.underscore{
 
 .description-wrapper > p{
   color: var(--clr-white);
-  line-height: 1.25em;
-  font-size: 1.2em;
-  text-indent: 1em;
+  line-height: 1.45rem;
+  font-size: 1.15rem;
+  text-indent: 2rem;
 }
 
 .subtitle-container{
@@ -303,4 +303,27 @@ i.underscore{
   width: 20%;
   text-align: left;
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 42rem) {
+  .center-75 {
+    width: 100%;
+  }
+
+  .description-wrapper {
+    width: 95%;
+  }
+
+  .description-wrapper > p{
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .lang-element-container{
+    width: calc(50rem - 15%);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
