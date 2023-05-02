@@ -8,6 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="media/portfolio/id-card.png" type="image/x-icon">
     <title>Philipp Salla - CV</title>
+
+    <script>
+      window.onscroll = function () { animateOnScroll() };
+      var activated = false;
+      function animateOnScroll() {
+        if (activated) return;
+        if (document.body.scrollTop > document.getElementById("languages").getBoundingClientRect().top || document.documentElement.scrollTop > document.getElementById("languages").getBoundingClientRect().top) {
+          activated = true;
+
+          array = ["Html", "Css", "MySql", "Python", "Java", "Go", "C++", "C", "Haskell"];
+
+          for (let index = 0; index < array.length; index++) {
+            document.getElementById("lang" + array[index]).classList.add("animate-opacity");
+            document.getElementById("lang" + array[index] + "Bar").classList.add("animate-width");
+            document.getElementById("lang" + array[index] + "Val").classList.add("animate-opacity-val");
+            
+          }
+        }
+      }
+    </script>
   </head>
   <body>
 
@@ -109,118 +129,118 @@
         <div class="vert-center-container">
 
           <!-- HTML element -->
-          <div class="lang-element-container flex-element">
+          <div id="langHtml" class="lang-element-container flex-element">
             <div class="lang-title">
               HTML
             </div>
-            <div class="lang-bar-full">
+            <div id="langHtmlBar" class="lang-bar-full">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langHtmlVal" class="lang-val">
               good
             </div>
           </div>
 
           <!-- CSS element -->
-          <div class="lang-element-container flex-element">
+          <div id="langCss" class="lang-element-container flex-element">
             <div class="lang-title">
               CSS
             </div>
-            <div class="lang-bar-full">
+            <div id="langCssBar" class="lang-bar-full">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langCssVal" class="lang-val">
               good
             </div>
           </div>
 
           <!-- MySQL element -->
-          <div class="lang-element-container flex-element">
+          <div id="langMySql" class="lang-element-container flex-element">
             <div class="lang-title">
               MySQL
             </div>
-            <div class="lang-bar-half">
+            <div id="langMySqlBar" class="lang-bar-half">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langMySqlVal" class="lang-val">
               advanced
             </div>
           </div>
 
           <!-- Python element -->
-          <div class="lang-element-container flex-element">
+          <div id="langPython" class="lang-element-container flex-element">
             <div class="lang-title">
               Python
             </div>
-            <div class="lang-bar-full">
+            <div id="langPythonBar" class="lang-bar-full">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langPythonVal" class="lang-val">
               good
             </div>
           </div>
 
           <!-- Java element -->
-          <div class="lang-element-container flex-element">
+          <div id="langJava" class="lang-element-container flex-element">
             <div class="lang-title">
               Java
             </div>
-            <div class="lang-bar-upper">
+            <div id="langJavaBar" class="lang-bar-upper">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langJavaVal" class="lang-val">
               decent
             </div>
           </div>
 
           <!-- Go element -->
-          <div class="lang-element-container flex-element">
+          <div id="langGo" class="lang-element-container flex-element">
             <div class="lang-title">
               Go
             </div>
-            <div class="lang-bar-half">
+            <div id="langGoBar" class="lang-bar-half">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langGoVal" class="lang-val">
               advanced
             </div>
           </div>
 
           <!-- C++ element -->
-          <div class="lang-element-container flex-element">
+          <div id="langC++" class="lang-element-container flex-element">
             <div class="lang-title">
               C++
             </div>
-            <div class="lang-bar-upper">
+            <div id="langC++Bar" class="lang-bar-upper">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langC++Val" class="lang-val">
               decent
             </div>
           </div>
 
           <!-- C element -->
-          <div class="lang-element-container flex-element">
+          <div id="langC" class="lang-element-container flex-element">
             <div class="lang-title">
               C
             </div>
-            <div class="lang-bar-half">
+            <div id="langCBar" class="lang-bar-half">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langCVal" class="lang-val">
               advanced
             </div>
           </div>
 
           <!-- Haskell element -->
-          <div class="lang-element-container flex-element">
+          <div id="langHaskell" class="lang-element-container flex-element">
             <div class="lang-title">
               Haskell
             </div>
-            <div class="lang-bar-lower">
+            <div id="langHaskellBar" class="lang-bar-lower">
               <hr class="bar">
             </div>
-            <div class="lang-val">
+            <div id="langHaskellVal" class="lang-val">
               beginner
             </div>
           </div>
