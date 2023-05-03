@@ -310,6 +310,43 @@ i.underscore{
   /* animation: inc-opacity forwards 1s 4s ease; */
 }
 
+.link-container{
+  border-radius: 1rem;
+  width: 16rem;
+  outline: 0.2rem solid var(--clr-light);
+  background-color: var(--clr-bg);
+  margin: auto;
+  transition: 500ms ease;
+}
+
+.link-container:hover,
+.link-container:focus-within{
+  background-color: var(--clr-blue);
+  /* outline: 0.3rem solid var(--clr-red); */
+  transform: scale(1.1) translateY(-1rem);
+}
+
+.link-container:hover h2,
+.link-container:focus-within h2{
+  color: var(--clr-dark);
+}
+
+.link-container > a{
+  text-decoration: none;
+}
+
+.link-wrapper{
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.link-img-wrapper{
+  width: 5rem;
+  height: 5rem;
+  box-sizing: border-box;
+  margin: auto;
+}
+
 @media screen and (max-width: 42rem) {
   .center-75 {
     width: 100%;
