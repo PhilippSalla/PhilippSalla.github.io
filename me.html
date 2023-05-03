@@ -17,7 +17,7 @@
         if (document.body.scrollTop > document.getElementById("languages").getBoundingClientRect().top || document.documentElement.scrollTop > document.getElementById("languages").getBoundingClientRect().top) {
           activated = true;
 
-          array = ["Html", "Css", "MySql", "Python", "Java", "Go", "C++", "C", "Haskell"];
+          array = ["Html", "Css", "MySql", "Python", "Java", "Go", "Cpp", "C", "Haskell"];
 
           for (let index = 0; index < array.length; index++) {
             document.getElementById("lang" + array[index]).classList.add("animate-opacity");
@@ -207,14 +207,14 @@
           </div>
 
           <!-- C++ element -->
-          <div id="langC++" class="lang-element-container flex-element">
+          <div id="langCpp" class="lang-element-container flex-element">
             <div class="lang-title">
               C++
             </div>
-            <div id="langC++Bar" class="lang-bar-upper">
+            <div id="langCppBar" class="lang-bar-upper">
               <hr class="bar">
             </div>
-            <div id="langC++Val" class="lang-val">
+            <div id="langCppVal" class="lang-val">
               decent
             </div>
           </div>

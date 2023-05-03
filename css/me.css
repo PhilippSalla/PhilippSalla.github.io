@@ -250,7 +250,7 @@ i.underscore{
   background-color: var(--clr-dark);
   outline: 0.2rem solid var(--clr-dark);
   box-sizing: border-box;
-  /* animation: inc-opacity forwards 1s ease; */
+  animation-delay: 2s;
 }
 
 .lang-element-container:nth-of-type(even){
@@ -351,9 +351,81 @@ i.underscore{
 }
 
 .animate-opacity-val {
-  animation: inc-opacity backwards 1s 3s ease;
+  animation: inc-opacity backwards 1s ease;
 }
 
 .animate-width{
-  animation: inc-width backwards 3s 1s ease;
+  animation: inc-width backwards 3s ease;
+}
+
+#langHtmlBar{
+  animation-delay: 1s;
+}
+
+#langHtmlVal{
+  animation-delay: 3s;
+}
+
+#langCssBar{
+  animation-delay: 1.2s;
+}
+
+#langCssVal{
+  animation-delay: 3.2s;
+}
+
+#langMySqlBar{
+  animation-delay: 1.4s;
+}
+
+#langMySqlVal{
+  animation-delay: 3.4s;
+}
+
+#langPythonBar{
+  animation-delay: 1.6s;
+}
+
+#langPythonVal{
+  animation-delay: 3.6s;
+}
+
+#langJavaBar{
+  animation-delay: 1.8s;
+}
+
+#langJavaVal{
+  animation-delay: 3.8s;
+}
+
+#langGoBar{
+  animation-delay: 2s;
+}
+
+#langGoVal{
+  animation-delay: 4s;
+}
+
+#langCppBar{
+  animation-delay: 2.2s;
+}
+
+#langCppVal{
+  animation-delay: 4.2s;
+}
+
+#langCBar{
+  animation-delay: 2.4s;
+}
+
+#langCVal{
+  animation-delay: 4.4s;
+}
+
+#langHaskellBar{
+  animation-delay: 2.6s;
+}
+
+#langHaskellVal{
+  animation-delay: 4.6s;
 }
