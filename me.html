@@ -17,7 +17,7 @@
         if (document.body.scrollTop > document.getElementById("languages").getBoundingClientRect().top || document.documentElement.scrollTop > document.getElementById("languages").getBoundingClientRect().top) {
           activatedLangFade = true;
 
-          array = ["Html", "Css", "MySql", "Python", "Java", "Go", "Cpp", "C", "Haskell"];
+          array = ["Html", "Css", "Python", "Java", "Go", "Cpp", "C", "MySql", "Haskell"];
 
           for (let index = 0; index < array.length; index++) {
             document.getElementById("lang" + array[index]).classList.add("lang-element-container");
@@ -153,81 +153,82 @@
             </div>
           </div>
 
-          <!-- MySQL element -->
-          <div id="langMySql" class="flex-element" style="--k:3">
-            <div class="lang-title">
-              MySQL
-            </div>
-            <div id="langMySqlBar" class="lang-bar-half" style="--i:3">
-              <hr class="bar">
-            </div>
-            <div id="langMySqlVal" class="" style="--j:3">
-              advanced
-            </div>
-          </div>
 
           <!-- Python element -->
-          <div id="langPython" class="flex-element" style="--k:4">
+          <div id="langPython" class="flex-element" style="--k:3">
             <div class="lang-title">
               Python
             </div>
-            <div id="langPythonBar" class="lang-bar-full" style="--i:4">
+            <div id="langPythonBar" class="lang-bar-full" style="--i:3">
               <hr class="bar">
             </div>
-            <div id="langPythonVal" class="" style="--j:4">
+            <div id="langPythonVal" class="" style="--j:3">
               good
             </div>
           </div>
 
           <!-- Java element -->
-          <div id="langJava" class="flex-element" style="--k:5">
+          <div id="langJava" class="flex-element" style="--k:4">
             <div class="lang-title">
               Java
             </div>
-            <div id="langJavaBar" class="lang-bar-upper" style="--i:5">
+            <div id="langJavaBar" class="lang-bar-upper" style="--i:4">
               <hr class="bar">
             </div>
-            <div id="langJavaVal" class="" style="--j:5">
+            <div id="langJavaVal" class="" style="--j:4">
               decent
             </div>
           </div>
 
           <!-- Go element -->
-          <div id="langGo" class="flex-element" style="--k:6">
+          <div id="langGo" class="flex-element" style="--k:5">
             <div class="lang-title">
               Go
             </div>
-            <div id="langGoBar" class="lang-bar-half" style="--i:6">
+            <div id="langGoBar" class="lang-bar-half" style="--i:5">
               <hr class="bar">
             </div>
-            <div id="langGoVal" class="" style="--j:6">
+            <div id="langGoVal" class="" style="--j:5">
               advanced
             </div>
           </div>
 
           <!-- C++ element -->
-          <div id="langCpp" class="flex-element" style="--k:7">
+          <div id="langCpp" class="flex-element" style="--k:6">
             <div class="lang-title">
               C++
             </div>
-            <div id="langCppBar" class="lang-bar-upper" style="--i:7">
+            <div id="langCppBar" class="lang-bar-upper" style="--i:6">
               <hr class="bar">
             </div>
-            <div id="langCppVal" class="" style="--j:7">
+            <div id="langCppVal" class="" style="--j:6">
               decent
             </div>
           </div>
 
           <!-- C element -->
-          <div id="langC" class="flex-element" style="--k:8">
+          <div id="langC" class="flex-element" style="--k:7">
             <div class="lang-title">
               C
             </div>
-            <div id="langCBar" class="lang-bar-half" style="--i:8">
+            <div id="langCBar" class="lang-bar-half" style="--i:7">
               <hr class="bar">
             </div>
-            <div id="langCVal" class="" style="--j:8">
+            <div id="langCVal" class="" style="--j:7">
               advanced
+            </div>
+          </div>
+
+          <!-- MySQL element -->
+          <div id="langMySql" class="flex-element" style="--k:8">
+            <div class="lang-title">
+              MySQL
+            </div>
+            <div id="langMySqlBar" class="lang-bar-lower" style="--i:8">
+              <hr class="bar">
+            </div>
+            <div id="langMySqlVal" class="" style="--j:8">
+              beginner
             </div>
           </div>
 
