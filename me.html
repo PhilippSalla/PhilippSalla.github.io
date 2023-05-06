@@ -11,19 +11,49 @@
 
     <script>
       window.onscroll = function () { animateOnScroll() };
+      var activatedDescrFade = false;
       var activatedLangFade = false;
+      var activatedLinksFade = false;
       function animateOnScroll() {
-        if (activatedLangFade) return;
-        if (document.body.scrollTop > document.getElementById("languages").getBoundingClientRect().top || document.documentElement.scrollTop > document.getElementById("languages").getBoundingClientRect().top) {
-          activatedLangFade = true;
 
+        if (!activatedDescrFade &&
+          (document.body.scrollTop > document.getElementById("textMe").getBoundingClientRect().top
+            || document.documentElement.scrollTop > document.getElementById("textMe").getBoundingClientRect().top)) {
+          activatedDescrFade = true;
+
+          document.getElementById("titleMe").classList.add("animate-opacity");
+          document.getElementById("titleMe").classList.remove("op0");
+          document.getElementById("titleDescr").classList.add("animate-opacity");
+          document.getElementById("titleDescr").classList.remove("op0");
+          document.getElementById("textMe").classList.add("animate-move-left");
+          document.getElementById("textMe").classList.remove("op0");
+          document.getElementById("textLangs").classList.add("animate-move-right");
+          document.getElementById("textLangs").classList.remove("op0");
+        }
+
+        if (!activatedLangFade && 
+          (document.body.scrollTop > document.getElementById("langCssBar").getBoundingClientRect().top + 500 
+          || document.documentElement.scrollTop > document.getElementById("langCssBar").getBoundingClientRect().top + 500)) {
+          activatedLangFade = true;
           array = ["Html", "Css", "Python", "Java", "Go", "Cpp", "C", "MySql", "Haskell"];
 
+          document.getElementById("langDescr").classList.add("animate-opacity");
+          document.getElementById("langDescr").classList.remove("op0");
           for (let index = 0; index < array.length; index++) {
             document.getElementById("lang" + array[index]).classList.add("lang-element-container");
             document.getElementById("lang" + array[index] + "Bar").classList.add("lang-bar");
             document.getElementById("lang" + array[index] + "Val").classList.add("lang-val");
           }
+        }
+        
+        if (!activatedLinksFade &&
+          (document.body.scrollTop > document.getElementById("lnkSwt").getBoundingClientRect().top + 1000
+            || document.documentElement.scrollTop > document.getElementById("lnkSwt").getBoundingClientRect().top + 1000)){
+            activatedLinksFade = true;
+            
+            document.getElementById("lnkDescr").classList.add("animate-opacity");
+            document.getElementById("lnkSwt").classList.add("animate-move-left");
+            document.getElementById("lnkPpr").classList.add("animate-move-right");
         }
       }
     </script>
@@ -91,23 +121,23 @@
       <div class="center-75">
         <div class="vert-center-container">
 
-          <h2 class="descr-title">
+          <h2 id="titleMe" class="descr-title op0">
             <a href="#top">
               <i class="title-clr-blue"><</i> <i class="title-clr-red"> Me </i><i class="title-clr-green">/</i><i class="title-clr-blue">></i>
             </a>
           </h2>
 
           <!-- description container -->
-          <div class="description-wrapper">
+          <div id="textMe" class="description-wrapper op0">
             <p>Since 2018 I have studied applied computer science at the <a href="https://www.uni-due.de/" title="redirect to university website">University of Duisburg-Essen</a>. I recieved my bachelor degree in 2023 in the department of <a href="https://vs-uni-due.de/" title="redirect to department website">distributed systems</a>. Now I am studying applied computer science with a focus on distributed systems for the master's degree.</p>
           </div>
 
-          <h2 class="descr-title">
+          <h2 id="titleDescr" class="descr-title op0">
             <a href="#languages">
               <i class="title-clr-blue">def</i><i class="title-clr-green"> (</i> <i class="title-clr-red">Programming</i><i class="title-clr-green"> ) :</i>
             </a>
           </h2>
-          <div class="description-wrapper">
+          <div id="textLangs" class="description-wrapper op0">
             <p>During my studies I worked with various programming languages, both through lectures and private projects. It all started with <a href="https://www.java.com/de/" title="redirect to oracle/java">Java</a> before I started my studies. Through my studies I got to know <a href="https://www.python.org/" title="redirect to Python">Python</a> and continued to use it in private projects. Now I am most familiar with <a href="https://www.python.org/" title="redirect to Python">Python</a> as far as programming is concened. </p>
 
             <p>In terms of graphics, i worked with HTML / CSS out of my own interest and continued to expand my knowledge. Through lectures I came into contact with <a href="https://www.haskell.org/" title="redirect to Haskell">Haskell</a> and Prolog. During my practical project for the bachelor I worked with <a href="https://go.dev/" title="redirect to Go">Go</a>, whereas the practical part of my bachelor thesis mainly involved C / C++ and <a href="https://www.python.org/" title="redirect to Python">Python</a>.</p>
@@ -126,7 +156,7 @@
       <!-- <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by Freepik - Flaticon</a> -->
       <div class="center-85">
         <div class="vert-center-container">
-          <div class="description-wrapper space-3">
+          <div id="langDescr" class="description-wrapper space-3 op0">
             <p>Here are some of the languages I've explored and worked with so far: </p>
           </div>
 
@@ -256,12 +286,12 @@
     <!-- links -->
     <div id="links" class="main-element">
       <div class="center-75 flex-element vert-center-container">
-        <div class="center-85 description-wrapper space-3">
+        <div id="lnkDescr" class="center-75 description-wrapper space-3">
           <p>The following links will take you to some of the software projects I've been working on. You can also take a look at my theoretical work, which I wrote both towards the end of my school days and during my studies:</p>
         </div>
 
         <!-- Software Projects -->
-        <div class="link-container">
+        <div id="lnkSwt" class="link-container">
           <a href="#">
             <div class="link-wrapper">
               <div class="link-img-wrapper">
@@ -274,7 +304,7 @@
         </div>
 
         <!-- Paper Work -->
-        <div class="link-container">
+        <div id="lnkPpr" class="link-container">
           <a href="#">
             <div class="link-wrapper">
               <div class="link-img-wrapper">

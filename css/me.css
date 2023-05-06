@@ -366,6 +366,23 @@ i.underscore{
   margin-bottom: 3rem;
 }
 
+.animate-opacity{
+  animation: inc-opacity 1.5s 1s backwards ease;
+}
+
+.animate-move-left{
+  animation: move-in-left 2s 1s backwards ease;
+}
+
+.animate-move-right {
+  animation: move-in-right 2s 2.5s backwards ease;
+}
+
+.op0{
+  opacity: 0;
+}
+
+
 @media screen and (max-width: 42rem) {
   .center-75 {
     width: 100%;
@@ -399,5 +416,28 @@ i.underscore{
 @keyframes inc-opacity {
   0%{
     opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-left {
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-right{
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
   }
 }
