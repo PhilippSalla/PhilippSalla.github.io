@@ -361,6 +361,11 @@ i.underscore{
   margin: auto;
 }
 
+.space-3{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 @media screen and (max-width: 42rem) {
   .center-75 {
     width: 100%;
