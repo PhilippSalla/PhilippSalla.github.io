@@ -382,6 +382,45 @@ i.underscore{
   opacity: 0;
 }
 
+.footer-container{
+  height: 5rem;
+  width: 100%;
+}
+
+.footer-element {
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  line-height: 3rem;
+  font-size: 1rem;
+  color: var(--clr-white);
+  width: 25%;
+}
+
+.socials-container{
+  width: 50%;
+}
+
+.socials-container > div{
+  width: fit-content;
+  margin: auto;
+}
+
+.social-wrapper{
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.5rem;
+  transition: 250ms;
+}
+
+.social-wrapper:hover,
+.social-wrapper:focus-within{
+  transform: scale(1.5) translateY(-1rem);
+}
+
+.to-top{
+  text-align: right;
+}
 
 @media screen and (max-width: 42rem) {
   .center-75 {
