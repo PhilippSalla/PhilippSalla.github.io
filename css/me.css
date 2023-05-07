@@ -414,16 +414,31 @@ i.underscore{
   width: 3rem;
   height: 3rem;
   margin: 0 0.5rem;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
+  outline: none;
+  border-radius: 50%;
 }
 
 .social-wrapper:hover,
 .social-wrapper:focus-within{
   transform: scale(1.5) translateY(-1rem);
+  outline: 0.15rem solid var(--clr-blue);
+  border-radius: 0.5rem;
+  background-color: var(--clr-bg);
 }
 
-.to-top{
-  text-align: right;
+.to-top > a > div{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0;
+  margin-left: auto;
+  transform: rotate(180deg);
+  transition: 250ms ease-in-out;
+}
+
+.to-top > a > div:hover,
+.to-top > a > div:focus-within{
+  transform: translateY(-1rem) scale(1.5) rotate(180deg);
 }
 
 @media screen and (max-width: 42rem) {
