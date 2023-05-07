@@ -218,6 +218,10 @@ i.underscore{
   text-indent: 2rem;
 }
 
+.descr-center > p {
+  text-align: center;
+}
+
 .subtitle-container{
   width: fit-content;
   margin: auto;
