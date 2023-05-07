@@ -132,7 +132,7 @@ i.underscore{
 }
 
 .vert-center-container{
-  width: 100%;
+  /* width: 100%; */
   height: fit-content;
   position: relative;
   top: 50%;
