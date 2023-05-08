@@ -545,3 +545,19 @@ i.underscore{
     opacity: 0;
   }
 }
+
+.half{
+  flex-grow: 100;
+  width: 50%;
+  min-width: 20rem;
+}
+
+.project-title{
+  font-size: 2rem;
+  width: fit-content;
+  margin: auto;
+}
+
+*:hover{
+  outline: 1px solid red;
+}
