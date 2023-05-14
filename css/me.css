@@ -563,3 +563,12 @@ i.underscore{
 *:hover{
   outline: 1px solid red;
 }
+
+.main > .half{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.main:nth-of-type(even) {
+  background-color: var(--clr-dark);
+}
