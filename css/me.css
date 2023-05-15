@@ -582,3 +582,7 @@ i.underscore{
   border-radius: 0.75rem;
   overflow: hidden;
 }
+
+.main .description-wrapper{
+  color: var(--clr-white);
+}
