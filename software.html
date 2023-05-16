@@ -14,15 +14,23 @@
 
     <script>
       window.onscroll = function () { animateOnScroll() };
-      var activatedConsoleChatFade = false;
+      var activatedCarSharerFade = false;
       function animateOnScroll() {
 
-        if (!activatedConsoleChatFade &&
-          (document.body.scrollTop > document.getElementById("consoleChat").getBoundingClientRect().top
-            || document.documentElement.scrollTop > document.getElementById("ConsoleChat").getBoundingClientRect().top)) {
-          activatedConsoleChatFade = true;
+        // Checks for CarSharer
+        if (!activatedCarSharerFade &&
+          (document.body.scrollTop > document.getElementById("carSharer").getBoundingClientRect().top + 500
+            || document.documentElement.scrollTop > document.getElementById("carSharer").getBoundingClientRect().top + 500)) {
+          activatedCarSharerFade = true;
 
-          document.getElementById("consoleChatDescr").classList.add("enter-from-top");
+          document.getElementById("carSharerTitle").classList.add("animate-opacity");
+          document.getElementById("carSharerTitle").classList.remove("op0");
+          document.getElementById("carSharerImg").classList.add("animate-move-left-offset");
+          document.getElementById("carSharerImg").classList.remove("op0");
+          document.getElementById("carSharerDescr").classList.add("enter-from-top");
+          document.getElementById("carSharerDescr").classList.remove("op0");
+          document.getElementById("carSharerTags").classList.add("animate-move-right");
+          document.getElementById("carSharerTags").classList.remove("op0");
         }
 
       }
@@ -53,9 +61,11 @@
       </div>
     </div>
 
+    <!-- ConsoleChat -->
     <div id="consoleChat" class="main flex-element">
       
-      <div id="left" class="half">
+      <!-- ConsoleChat project description -->
+      <div class="half">
         <div class="project-title animate-opacity">
           <i class="title-clr-red">def</i> <i class="title-clr-blue">(</i> <i class="title-clr-green">ConsoleChat</i> <i
             class="title-clr-blue">) :</i>
@@ -83,7 +93,7 @@
         <!-- tags -->
         <div class="tags-container flex-element animate-move-left">
         
-          <div class="tag-element" title="Programming language">
+          <div class="tag-element">
             <p>Python</p>
           </div>
         
@@ -91,7 +101,7 @@
             <p>○</p>
           </div>
         
-          <div class="tag-element" title="Communication via LAN">
+          <div class="tag-element">
             <p>Network</p>
           </div>
         
@@ -99,7 +109,7 @@
             <p>○</p>
           </div>
         
-          <div class="tag-element" title="Developed on my own">
+          <div class="tag-element">
             <p>Solo</p>
           </div>
         
@@ -107,38 +117,96 @@
 
       </div>
     
-      <div id="right" class="half">
-        
-        <div class="image-wrapper animate-move-right">
-          <img src="media/portfolio/consoleChat.png" alt="">
+      <!-- ConsoleChat project image -->
+      <div class="half">
+        <div class="image-wrapper animate-move-right-offset">
+          <img src="media/portfolio/consoleChat.png" alt="consoleChat project image">
         </div>
-
       </div>
-
     </div>
 
-    <!-- <div class="main-element flex-element">
-      <div class="vert-center-container half">
-        <div class="project-title">
-          <i class="title-clr-red">def</i> <i class="title-clr-blue">(</i> <i class="title-clr-green">PROJECT</i> <i class="title-clr-blue">) :</i>
-        </div>
-        <div class="description-wrapper">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsum sed beatae temporibus ullam odio numquam, dolor inventore eaque dolorum ut adipisci excepturi iure veniam eligendi autem libero ducimus dignissimos.
-        </div>
-      </div>
-      <div class="vert-center-container half">
-        <div class="project-title">
-          <i class="title-clr-red">def</i> <i class="title-clr-blue">(</i> <i class="title-clr-green">PROJECT</i> <i
-            class="title-clr-blue">) :</i>
-        </div>
-        <div class="description-wrapper">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsum sed beatae temporibus ullam odio numquam,
-          dolor inventore eaque dolorum ut adipisci excepturi iure veniam eligendi autem libero ducimus dignissimos.
+
+    <!-- CarSharer -->
+    <div id="carSharer" class="main flex-element flex-reverse">
+    
+      <!-- CarSharer project image -->
+      <div class="half">
+        <div id="carSharerImg" class="image-wrapper op0">
+          <img src="media/portfolio/carSharer.png" class="low-opacity" alt="CarSharer project image">
         </div>
       </div>
-    </div> -->
-  
-  
+    
+      <!-- CarSharer project description -->
+      <div class="half">
+    
+        <div id="carSharerTitle" class="project-title op0">
+          <i class="title-clr-blue"><</i> <i class="title-clr-red">CarSharer</i> <i class="title-clr-green">/ </i><i class="title-clr-blue">></i>
+        </div>
+        
+        <div class="space-3"></div>
+        
+        <div id="carSharerDescr" class="description-wrapper op0">
+          <p>In the practical part of the database lecture 2021/22 my team and I developed a web application with which users can
+          either offer or book rides and write ratings.</p>
+          <br>
+          <p>The focus of the task was on database access using sql and the basic security of database queries. On the main page you could
+          see the offered rides as well as the booked rides. On the corresponding detail page (picture) the respective details and ratings were displayed. A new ride could be created on a similar page with a corresponding form.</p>
+          <br><p>The backend was programmed in Python using the <a title="redirect to Flask framework" href="https://flask.palletsprojects.com/en/2.3.x/">Flask</a> framework for the webserver and the database was accessed via DB2-SQL.
+          During the project I worked on the frontend as well as on the backend.</p>
+        </div>
+        
+        <!-- tags -->
+        <div id="carSharerTags" class="tags-container flex-element op0">
+        
+          <div class="tag-element">
+            <p>Python</p>
+          </div>
+        
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+
+          <div class="tag-element">
+            <p>HTML / CSS</p>
+          </div>
+
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+          
+          <div class="tag-element">
+            <p>DB2-SQL</p>
+          </div>
+          
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+
+          <div class="tag-element">
+            <p>FullStack</p>
+          </div>
+          
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+        
+          <div class="tag-element">
+            <p>WebApp</p>
+          </div>
+        
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+        
+          <div class="tag-element">
+            <p>Team</p>
+          </div>
+        
+        </div>
+    
+      </div>
+    
+    </div>
   
   </body>
 </html>
