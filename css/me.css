@@ -31,7 +31,7 @@ img{
 }
 
 h1{
-  font-size: 3em;
+  font-size: 3rem;
   color: var(--clr-red);
   text-align: center;
 }
@@ -148,8 +148,9 @@ i.underscore{
   min-width: 10em;
   max-width: 15em;
   margin: auto;
-  border-radius: 25%;
-  padding: 0.5em;
+  border-radius: 50%;
+  outline: 0.2rem solid var(--clr-light);
+  overflow: hidden;
   transition: 500ms;
 }
 
