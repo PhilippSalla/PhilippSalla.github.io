@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="//fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="//fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/me.css">
     <link rel="shortcut icon" href="media/portfolio/id-card.png" type="image/x-icon">
+
     <title>Philipp Salla - Software</title>
+
+    <script>
+      window.onscroll = function () { animateOnScroll() };
+      var activatedConsoleChatFade = false;
+      function animateOnScroll() {
+
+        if (!activatedConsoleChatFade &&
+          (document.body.scrollTop > document.getElementById("consoleChat").getBoundingClientRect().top
+            || document.documentElement.scrollTop > document.getElementById("ConsoleChat").getBoundingClientRect().top)) {
+          activatedConsoleChatFade = true;
+
+          document.getElementById("consoleChatDescr").classList.add("enter-from-top");
+        }
+
+      }
+    </script>
+
   </head>
   <body>
     <!-- NAV BAR -->
@@ -33,32 +53,35 @@
       </div>
     </div>
 
-    <div class="main flex-element">
+    <div id="consoleChat" class="main flex-element">
       
       <div id="left" class="half">
-        <div class="project-title">
+        <div class="project-title animate-opacity">
           <i class="title-clr-red">def</i> <i class="title-clr-blue">(</i> <i class="title-clr-green">ConsoleChat</i> <i
             class="title-clr-blue">) :</i>
         </div>
-        <div class="description-wrapper">
+
+        <div class="space-3"></div>
+
+        <div id="consoleChatDescr" class="description-wrapper enter-from-top">
           <p>In the middle of 2021, I developed a chat program according to an exercise assignment of a lecture, with which two
-          people in the same network could write with each other via the console window.
-          <br><br>
-          After successfully completing the task, I
+          people in the same network could write with each other via the console window. </p>
+          <br>
+          <p>After successfully completing the task, I
           then redesigned the program so that more than two people could communicate with each other. I changed from a 1:1 direct
           communication of the programs to a server/client structure. Thus it was possible to select whether the corresponding
-          instance of the program should be the server or a client.
-          <br><br>
-          The server could also be configured on different ports, so
+          instance of the program should be the server or a client.</p>
+          <br>
+          <p>The server could also be configured on different ports, so
           there could be multiple servers on the same network and on the same machine. A client could then log in with the
-          corresponding IP address and its own user name (if not already assigned).
-          <br><br>
-          Since my focus at the time was only on the
+          corresponding IP address and its own user name (if not already assigned).</p>
+          <br>
+          <p>Since my focus at the time was only on the
           communication itself and the backend, the appearance of the program remained in the console window.</p>
         </div>
 
         <!-- tags -->
-        <div class="tags-container flex-element">
+        <div class="tags-container flex-element animate-move-left">
         
           <div class="tag-element" title="Programming language">
             <p>Python</p>
@@ -86,7 +109,7 @@
     
       <div id="right" class="half">
         
-        <div class="image-wrapper">
+        <div class="image-wrapper animate-move-right">
           <img src="media/portfolio/consoleChat.png" alt="">
         </div>
 
