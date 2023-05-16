@@ -503,7 +503,12 @@ i.underscore{
 
 .nav{
   height: 8%;
-  animation: move-top backwards 2s ease;
+ 
+}
+
+.nav,
+.enter-from-top{
+  animation: enter-from-top backwards 2s ease;
 }
 
 .nav-container{
@@ -543,7 +548,7 @@ i.underscore{
   outline: 0.2rem solid var(--clr-dark);
 }
 
-@keyframes move-top {
+@keyframes enter-from-top {
   0%{
     transform: translateY(-100%);
     opacity: 0;
