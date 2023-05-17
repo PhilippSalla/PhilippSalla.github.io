@@ -135,6 +135,12 @@ i.underscore{
   margin: auto;
 }
 
+.center-50{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
 .center-85{
   width: 85%;
   height: 100%;
@@ -457,7 +463,8 @@ i.underscore{
 }
 
 @media screen and (max-width: 42rem) {
-  .center-75 {
+  .center-75,
+  .center-50 {
     width: 100%;
   }
 
