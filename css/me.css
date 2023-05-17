@@ -543,7 +543,10 @@ i.underscore{
 }
 
 .nav{
+  position: fixed;
   height: 8%;
+  z-index: 100;
+  background-color: var(--clr-bg);
 }
 
 .nav,
@@ -575,6 +578,7 @@ i.underscore{
   font-size: 1.5rem;
   text-align: center;
   border-radius: 0.5rem;
+  outline: 0.2rem solid var(--clr-dark);
   color: var(--clr-blue);
   background-color: var(--clr-bg);
   transition: 250ms ease;
@@ -608,6 +612,7 @@ i.underscore{
 }
 
 .main{
+  min-height: 100%;
   overflow-y: hidden;
 }
 

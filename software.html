@@ -15,6 +15,8 @@
     <script>
       window.onscroll = function () { animateOnScroll() };
       var activatedCarSharerFade = false;
+      var activatedChuuChuUdpFade = false;
+      var activatedGoodsBookingFade = false;
       function animateOnScroll() {
 
         // Checks for CarSharer
@@ -31,6 +33,38 @@
           document.getElementById("carSharerDescr").classList.remove("op0");
           document.getElementById("carSharerTags").classList.add("animate-move-right");
           document.getElementById("carSharerTags").classList.remove("op0");
+        }
+
+        // Checks for ChuuChuUDP
+        if (!activatedChuuChuUdpFade &&
+          (document.body.scrollTop > document.getElementById("chuuChuUdp").getBoundingClientRect().top + 1000
+            || document.documentElement.scrollTop > document.getElementById("chuuChuUdp").getBoundingClientRect().top + 1000)) {
+          activatedChuuChuUdpFade = true;
+
+          document.getElementById("chuuChuUdpTitle").classList.add("animate-opacity");
+          document.getElementById("chuuChuUdpTitle").classList.remove("op0");
+          document.getElementById("chuuChuUdpImg").classList.add("animate-move-right-offset");
+          document.getElementById("chuuChuUdpImg").classList.remove("op0");
+          document.getElementById("chuuChuUdpDescr").classList.add("enter-from-top");
+          document.getElementById("chuuChuUdpDescr").classList.remove("op0");
+          document.getElementById("chuuChuUdpTags").classList.add("animate-move-left");
+          document.getElementById("chuuChuUdpTags").classList.remove("op0");
+        }
+
+        // Checks for GoodsBooking
+        if (!activatedGoodsBookingFade &&
+          (document.body.scrollTop > document.getElementById("goodsBooking").getBoundingClientRect().top + 1500
+            || document.documentElement.scrollTop > document.getElementById("goodsBooking").getBoundingClientRect().top + 1500)) {
+          activatedGoodsBookingFade = true;
+
+          document.getElementById("goodsBookingTitle").classList.add("animate-opacity");
+          document.getElementById("goodsBookingTitle").classList.remove("op0");
+          document.getElementById("goodsBookingImg").classList.add("animate-move-left-offset");
+          document.getElementById("goodsBookingImg").classList.remove("op0");
+          document.getElementById("goodsBookingDescr").classList.add("enter-from-top");
+          document.getElementById("goodsBookingDescr").classList.remove("op0");
+          document.getElementById("goodsBookingTags").classList.add("animate-move-right");
+          document.getElementById("goodsBookingTags").classList.remove("op0");
         }
 
       }
@@ -125,7 +159,6 @@
       </div>
     </div>
 
-
     <!-- CarSharer -->
     <div id="carSharer" class="main flex-element flex-reverse">
     
@@ -211,16 +244,16 @@
     <!-- ChuuChuUDP -->
     <div id="chuuChuUdp" class="main flex-element">
     
-      <!-- ConsoleChat project description -->
-      <div id="chuuChuUdpTitle" class="half">
-        <div class="project-title animate-opacity">
+      <!-- ChuuChuUDP project description -->
+      <div class="half">
+        <div id="chuuChuUdpTitle" class="project-title op0">
           <i class="title-clr-blue">func</i> <i class="title-clr-red">ChuuChuUDP</i> <i class="title-clr-green">( )</i> <i
             class="title-clr-blue"> {</i>
         </div>
     
         <div class="space-3"></div>
     
-        <div id="chuuchuUdpDescr" class="description-wrapper enter-from-top">
+        <div id="chuuChuUdpDescr" class="description-wrapper op0">
           <p>As practical course of my studies, I participated in the project "ChuuChuUDP" of the department of <a href="https://vs-uni-due.de/" title="redirect to department website">distributed systems</a> in 2021/22. Our team had the task to automate the operation of a
           model railway system in such a way that the user could click on target points on the track and the train would navigate there on its
           own, as well as select ready-made routes.</p>
@@ -235,7 +268,7 @@
         </div>
     
         <!-- tags -->
-        <div id="chuuChuUdpTags" class="tags-container flex-element animate-move-left">
+        <div id="chuuChuUdpTags" class="tags-container flex-element op0">
     
           <div class="tag-element">
             <p>HTML / CSS</p>
@@ -279,10 +312,80 @@
     
       <!-- ConsoleChat project image -->
       <div class="half">
-        <div id="chuuChuUdpImg" class="image-wrapper animate-move-right-offset">
+        <div id="chuuChuUdpImg" class="image-wrapper op0">
           <img src="media/portfolio/chuuChuUDP.png" alt="chuuChuUDP project image">
         </div>
       </div>
+    </div>
+
+    <!-- GoodsBooking -->
+    <div id="goodsBooking" class="main flex-element flex-reverse">
+    
+      <!-- GoodsBooking project image -->
+      <div class="half">
+        <div id="goodsBookingImg" class="image-wrapper op0">
+          <img src="media/portfolio/goodsBookingStageline.png" alt="GoodsBooking project image">
+        </div>
+      </div>
+    
+      <!-- GoodsBooking project description -->
+      <div class="half">
+    
+        <div id="goodsBookingTitle" class="project-title op0">
+          <i class="title-clr-red">def</i> <i class="title-clr-blue">(</i> <i class="title-clr-green">GoodsBooking</i> <i class="title-clr-blue">) :</i>
+        </div>
+    
+        <div class="space-3"></div>
+    
+        <div id="goodsBookingDescr" class="description-wrapper op0">
+          <p>A management system for bookings of products from the storage that I developed in the second half of 2022 for the
+          company <a href="https://stageline-lichttechnik.de/" title="redirect to stageline electronic">StageLine electronic</a>.</p>
+          <br>
+          <p>The system should allow employees to select existing products, to book a desired quantity
+          from the storage, to enter the buyer's information and therefore reserve the products for shipping. In addition, the system takes over the management of the serial
+          numbers of the corresponding products, can store all information in Excel tables and also read back from them. The
+          system is a web application for the local network that can be accessed and used from any system via the browser.</p>
+          <br>
+          <p>The backend is programmed in Python and uses the <a title="redirect to Flask framework" href="https://flask.palletsprojects.com/en/2.3.x/">Flask</a> framework for the web application and the <a href="https://pandas.pydata.org/" title="redirect to Pandas framework">Pandas</a> framework for
+          editing Excel files. It was my first full stack project, which was not developed as part of a lecture or for private
+          use.</p>
+        </div>
+    
+        <!-- tags -->
+        <div id="goodsBookingTags" class="tags-container flex-element op0">
+    
+          <div class="tag-element">
+            <p>Python</p>
+          </div>
+    
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+    
+          <div class="tag-element">
+            <p>HTML / CSS</p>
+          </div>
+    
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+    
+          <div class="tag-element">
+            <p>FullStack</p>
+          </div>
+    
+          <div class="tag-element">
+            <p>○</p>
+          </div>
+    
+          <div class="tag-element">
+            <p>Solo</p>
+          </div>
+    
+        </div>
+    
+      </div>
+    
     </div>
 
   </body>
