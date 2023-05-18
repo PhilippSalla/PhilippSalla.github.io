@@ -68,6 +68,11 @@ p{
   text-align: justify;
 }
 
+footer {
+  height: 5rem;
+  width: 100%;
+}
+
 a{
   transition: 250ms;
   color: inherit;
@@ -120,12 +125,12 @@ i.underscore{
   flex-wrap: wrap-reverse;
 }
 
-.main-element{
+section{
   width: 100%;
   height: 100%;
 }
 
-.main-element:nth-of-type(even){
+section:nth-of-type(even){
   background-color: var(--clr-dark);
 }
 
@@ -407,11 +412,6 @@ i.underscore{
   opacity: 0;
 }
 
-.footer-container{
-  height: 5rem;
-  width: 100%;
-}
-
 .footer-element {
   height: 100%;
   padding: 1rem;
@@ -649,4 +649,9 @@ i.underscore{
 .low-opacity:hover,
 .low-opacity:focus-within{
   opacity: 1;
+}
+
+.no-frame{
+  border: 0;
+  outline: 0;
 }

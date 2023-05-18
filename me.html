@@ -41,6 +41,7 @@
           document.getElementById("langDescr").classList.remove("op0");
           for (let index = 0; index < array.length; index++) {
             document.getElementById("lang" + array[index]).classList.add("lang-element-container");
+            document.getElementById("lang" + array[index]).classList.remove("op0");
             document.getElementById("lang" + array[index] + "Bar").classList.add("lang-bar");
             document.getElementById("lang" + array[index] + "Val").classList.add("lang-val");
           }
@@ -52,8 +53,11 @@
             activatedLinksFade = true;
             
             document.getElementById("lnkDescr").classList.add("animate-opacity");
+            document.getElementById("lnkDescr").classList.remove("op0");
             document.getElementById("lnkSwt").classList.add("animate-move-left");
+            document.getElementById("lnkSwt").classList.remove("op0");
             document.getElementById("lnkPpr").classList.add("animate-move-right");
+            document.getElementById("lnkPpr").classList.remove("op0");
         }
       }
     </script>
@@ -61,7 +65,7 @@
   <body>
 
     <!-- ME - element -->
-    <div id="top" class="main-element background-image bg-cpu">
+    <section id="top" class="background-image bg-cpu">
       <!-- cpu background image -->
       <!-- <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Technology icons created by Freepik - Flaticon</a> -->
 
@@ -114,10 +118,10 @@
           
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- descr - element -->
-    <div id="description" class="main-element">
+    <section id="description">
       <div class="center-75">
         <div class="vert-center-container">
 
@@ -148,10 +152,10 @@
 
       </div>
 
-    </div>
+    </section>
 
     <!-- language table -->
-    <div id="languages" class="main-element background-image bg-code">
+    <section id="languages" class="background-image bg-code">
       <!-- coding background image -->
       <!-- <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by Freepik - Flaticon</a> -->
       <div class="center-85">
@@ -161,7 +165,7 @@
           </div>
 
           <!-- HTML element -->
-          <div id="langHtml" class="flex-element" style="--k:1">
+          <div id="langHtml" class="flex-element op0" style="--k:1">
             <div class="lang-title">
               HTML
             </div>
@@ -174,7 +178,7 @@
           </div>
 
           <!-- CSS element -->
-          <div id="langCss" class="flex-element" style="--k:2">
+          <div id="langCss" class="flex-element op0" style="--k:2">
             <div class="lang-title">
               CSS
             </div>
@@ -186,9 +190,8 @@
             </div>
           </div>
 
-
           <!-- Python element -->
-          <div id="langPython" class="flex-element" style="--k:3">
+          <div id="langPython" class="flex-element op0" style="--k:3">
             <div class="lang-title">
               Python
             </div>
@@ -201,7 +204,7 @@
           </div>
 
           <!-- Java element -->
-          <div id="langJava" class="flex-element" style="--k:4">
+          <div id="langJava" class="flex-element op0" style="--k:4">
             <div class="lang-title">
               Java
             </div>
@@ -214,7 +217,7 @@
           </div>
 
           <!-- Go element -->
-          <div id="langGo" class="flex-element" style="--k:5">
+          <div id="langGo" class="flex-element op0" style="--k:5">
             <div class="lang-title">
               Go
             </div>
@@ -227,7 +230,7 @@
           </div>
 
           <!-- C++ element -->
-          <div id="langCpp" class="flex-element" style="--k:6">
+          <div id="langCpp" class="flex-element op0" style="--k:6">
             <div class="lang-title">
               C++
             </div>
@@ -240,7 +243,7 @@
           </div>
 
           <!-- C element -->
-          <div id="langC" class="flex-element" style="--k:7">
+          <div id="langC" class="flex-element op0" style="--k:7">
             <div class="lang-title">
               C
             </div>
@@ -253,7 +256,7 @@
           </div>
 
           <!-- MySQL element -->
-          <div id="langMySql" class="flex-element" style="--k:8">
+          <div id="langMySql" class="flex-element op0" style="--k:8">
             <div class="lang-title">
               MySQL
             </div>
@@ -266,7 +269,7 @@
           </div>
 
           <!-- Haskell element -->
-          <div id="langHaskell" class="flex-element" style="--k:9">
+          <div id="langHaskell" class="flex-element op0" style="--k:9">
             <div class="lang-title">
               Haskell
             </div>
@@ -281,13 +284,13 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
     <!-- links -->
-    <div id="links" class="main-element">
+    <section id="links">
       <div class="center-50 vert-center-container">
         
-        <h2 id="lnkDescr" class="descr-title space-3">References</h2>
+        <h2 id="lnkDescr" class="descr-title space-3 op0">References</h2>
         <!-- <div id="lnkDescr" class="description-wrapper space-3">
           <p>The following links will take you to some of the software projects I've been working on. You can also take a look at my theoretical work, which I wrote both towards the end of my school days and during my studies:</p>
         </div> -->
@@ -295,7 +298,7 @@
         <div class="flex-element">
           
           <!-- Software Projects -->
-          <div id="lnkSwt" class="link-container">
+          <div id="lnkSwt" class="link-container op0">
             <a href="software.html">
               <div class="link-wrapper">
                 <div class="link-img-wrapper">
@@ -308,7 +311,7 @@
           </div>
 
           <!-- Paper Work -->
-          <div id="lnkPpr" class="link-container">
+          <div id="lnkPpr" class="link-container op0">
             <a href="#">
               <div class="link-wrapper">
                 <div class="link-img-wrapper">
@@ -324,9 +327,9 @@
       </div>
       
       
-    </div>
+    </section>
 
-    <div id="footer" class="main-element flex-element footer-container">
+    <footer id="footer" class="flex-element">
       
       <div class="footer-element">
         &copy; Philipp Salla 2023
@@ -393,7 +396,7 @@
         </div>
       </div>
 
-    </div>
+    </footer>
 
     <script>
       let $root = $('html, body');
@@ -407,5 +410,6 @@
         return false;
       });
     </script>
+
   </body>
 </html>
