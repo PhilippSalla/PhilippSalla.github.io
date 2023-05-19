@@ -13,11 +13,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+/* 
 *:hover{
   outline: 1px solid var(--clr-blue);
   border-radius: 0.25rem;
-}
+} */
 
 html,
 body{
@@ -569,11 +569,6 @@ nav {
   background-color: var(--clr-dark);
   border-bottom: 0.2rem solid var(--clr-bg);
 }
-
-/* .nav{
-  position: fixed;
-  height: 2rem;
-} */
 
 nav,
 .enter-from-top{
