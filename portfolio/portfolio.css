@@ -124,11 +124,11 @@ p{
 }
 
 .bg-code {
-  background-image: url(../media/portfolio/coding.png);
+  background-image: url(assets/coding.png);
 }
 
 .bg-cpu {
-  background-image: url(../media/portfolio/cpu.png);
+  background-image: url(assets/cpu.png);
 }
 
 .bg-dark{
