@@ -437,6 +437,15 @@ p{
   background-color: var(--clr-red);
 }
 
+.lang-bar-lowest {
+  width: 4%;
+  color: var(--clr-red);
+}
+
+.lang-bar-lowest > hr {
+  background-color: var(--clr-red);
+}
+
 .lang-val{
   width: 20%;
   text-align: left;
