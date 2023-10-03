@@ -25,10 +25,10 @@
         <!-- Next Movie Details -->
         <div class="half">
           <div class="container movie-card-small">
-            <img src="https://m.media-amazon.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_FMjpg_UY2048_.jpg" alt="movie image">
+            <img id="nextMovieImage" src="___LINK_TO_AMAZON_MOVIES_DB___" alt="movie image" onerror="document.getElementById('nextMovieImage').src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png'; document.getElementById('nextMovieText').innerHTML = 'Durchsuche die Liste nach einem Film deiner Wahl oder entscheide Vorort'">
           </div>
           
-          <div class="movie-small-title">
+          <div id="nextMovieText" class="movie-small-title">
             A very long movie title with too many letters
           </div>
         </div>
