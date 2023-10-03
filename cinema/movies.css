@@ -72,6 +72,19 @@ img{
     display: flex;
     flex-wrap: wrap;
   }
+
+  .full{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .full > div{
+    width: 50%;
+  }
+
+  .timer{
+    margin-top: 0.5rem !important;
+  }
 }
 
 .movie-card-small{
