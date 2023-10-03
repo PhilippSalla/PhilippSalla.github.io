@@ -125,6 +125,10 @@ img{
   box-shadow: 0.4rem 0.4rem rgb(32, 32, 32);
 }
 
+.ani-accent-fade{
+  animation: ani-bg-acc-fade 2s infinite;
+}
+
 .right-details-day{
   text-align: center;
   width: fit-content;
@@ -238,5 +242,21 @@ img{
 
   .timer {
     margin-top: 0.5rem !important;
+  }
+}
+
+
+/*
+  Animation
+*/
+@keyframes ani-bg-acc-fade {
+  0%{
+    background-color: var(--clr-accent);
+  }
+  50%{
+    background-color: inherit;
+  }
+  100%{
+    background-color: var(--clr-accent);
   }
 }

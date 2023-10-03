@@ -28,6 +28,18 @@ switch (dateCode){
 }
 document.getElementById('movieDay').innerHTML = dateCode;
 
+var targetHours = dateObj.getHours();
+var targetMinutes = dateObj.getMinutes();
+var hourFill = "0";
+var minuteFill = "0";
+if (targetHours >= 10){
+  hourFill = ""
+}
+if (targetMinutes >= 10){
+  minuteFill = ""
+}
+document.getElementById('movieTime').innerHTML = hourFill + targetHours + " : " + minuteFill + targetMinutes;
+
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -58,8 +70,16 @@ var x = setInterval(function () {
     + m + minutes + "m " + s + seconds + "s ";
 
   if (distance < 0) {
-    clearInterval(x);
     document.getElementById("timer").innerHTML = "L Ä U F T";
+    document.getElementById("cinemaAndTime").classList.add("ani-accent-fade");
+  }
+
+  if (distance < -18013433) { // about 6 hours
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
+    document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
+    document.getElementById('movieTime').innerHTML = " - - : - - ";
+    document.getElementById('movieDay').innerHTML = "- ? -";
   }
 }, 1000);
 
