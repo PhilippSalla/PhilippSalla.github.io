@@ -1,5 +1,33 @@
 
-var countDownDate = new Date("Oct 4, 2023 17:00:00").getTime();
+var dateObj = new Date("Oct 4, 2023 17:00:00")
+var countDownDate = dateObj.getTime();
+
+var dateCode = dateObj.getDay();
+switch (dateCode){
+  case 0:
+    dateCode = "Sonntag";
+    break;
+  case 1:
+    dateCode = "Montag";
+    break;
+  case 2:
+    dateCode = "Dienstag";
+    break;
+  case 3:
+    dateCode = "Mittwoch";
+    break;
+  case 4:
+    dateCode = "Donnerstag";
+    break;
+  case 5:
+    dateCode = "Freitag";
+    break;
+  case 6:
+    dateCode = "Samstag";
+    break;
+}
+document.getElementById('movieDay').innerHTML = dateCode;
+
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
