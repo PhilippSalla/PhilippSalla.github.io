@@ -70,8 +70,6 @@ img{
 
 .movie-card-small{
   padding: 0;
-  aspect-ratio: 9/16;
-  height: 10rem;
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
   border-radius: 0.2rem;
@@ -215,6 +213,54 @@ img{
   background-color: var(--clr-light);
 }
 
+/*
+  Movie scroller
+*/
+.media-scroller{
+  --media-spacer: 0.75rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16%;
+  gap: var(--media-spacer, 1rem);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  height: max-content;
+  padding: var(--media-spacer, 1rem);
+  scroll-behavior: smooth;
+}
+
+.media-element{
+  outline: 1px solid red;
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--media-spacer, 1rem);
+  padding: var(--media-spacer, 1rem);
+  background-color: var(--clr-dark);
+  border-radius: 0.25rem;
+  box-shadow: 0.5rem 0.5rem rgb(32, 32, 32);
+}
+
+.media-element > img{
+  aspect-ratio: 9/16;
+  height: 16rem;
+  object-fit: contain;
+  outline: 1px solid blue;
+  margin: 0 auto;
+}
+
+.media-element > div{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.media-scroll-title{
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 0 auto;
+}
 
 /*
   responsive
