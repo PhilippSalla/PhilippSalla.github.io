@@ -218,9 +218,10 @@ img{
 */
 .media-scroller{
   --media-spacer: 0.75rem;
+  width: 100%;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 16%;
+  grid-auto-columns: 12rem;
   gap: var(--media-spacer, 1rem);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -273,7 +274,7 @@ img{
   responsive
 */
 @media (min-width: 61rem) {
-  .top-container, .search-container{
+  .top-container, .search-container, .media-scroller{
     width: 60rem;
     margin: 0 auto;
   }

@@ -84,3 +84,33 @@ var x = setInterval(function () {
 }, 1000);
 
 
+var movieList = [{ "title": "Die Bourne Identität", "imdbCoverId": "MV5BMjA0MDcyODM3MF5BMl5BanBnXkFtZTYwNzUxNDk5._V1_FMjpg_UX334_", "imdbLinkId": "tt0258463"}];
+
+// fetch movie list
+//TODO:
+
+// sort movie list
+//TODO:
+
+// display movie list
+for (const element of movieList){
+  var newMediaElement = document.createElement("div");
+  newMediaElement.classList.add("media-element");
+
+  var newMediaImage = document.createElement("img");
+  newMediaImage.src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
+  alert(newMediaImage.src);
+  //TODO: Add onerror redirecto to ?-image
+  newMediaElement.appendChild(newMediaImage);
+
+  var newMediaDiv = document.createElement("div");
+  var newMediaP = document.createElement("p");
+  newMediaP.classList.add("media-scroll-title");
+  newMediaP.innerText = element.title;
+  newMediaDiv.appendChild(newMediaP);
+
+  newMediaElement.appendChild(newMediaDiv);
+
+  document.getElementById("scroll_container").appendChild(newMediaElement);
+
+};
