@@ -99,7 +99,6 @@ for (const element of movieList){
 
   var newMediaImage = document.createElement("img");
   newMediaImage.src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
-  alert(newMediaImage.src);
   //TODO: Add onerror redirecto to ?-image
   newMediaElement.appendChild(newMediaImage);
 
