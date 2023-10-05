@@ -79,6 +79,12 @@ img{
   overflow: hidden;
 }
 
+.movie-card-small > img{
+  aspect-ratio: 9/16;
+  height: 10rem;
+  object-fit: cover;
+}
+
 .movie-small-title{
   word-wrap: break-word;
   width: calc(100% - 5.625rem);
