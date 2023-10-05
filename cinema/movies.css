@@ -225,7 +225,7 @@ img{
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   height: max-content;
-  padding: var(--media-spacer, 1rem);
+  padding: 2rem;
   scroll-behavior: smooth;
 }
 
@@ -238,6 +238,13 @@ img{
   background-color: var(--clr-dark);
   border-radius: 0.25rem;
   box-shadow: 0.5rem 0.5rem rgb(32, 32, 32);
+  transition: 250ms ease-in-out;
+}
+
+.media-element:hover,
+.media-element:focus-within{
+  transform: scale(1.05);
+  box-shadow: 1rem 1rem rgb(32, 32, 32);
 }
 
 .media-element > img{

@@ -40,7 +40,7 @@
                 DD : MM : YYYY   hh : mm : ss
               </div>
               <div id="movieDay" class="right-details-day">
-                Donnerstag
+                weekday
               </div>
             </div>
             
@@ -50,7 +50,7 @@
                   Kino 1
                 </div>
                 <div id="movieTime" class="right-details-time">
-                  17 : 00
+                  hh : mm
                 </div>
               </div>
             </div>
@@ -280,7 +280,6 @@
           e.preventDefault();
         }
         if (document.getElementById('scroll_container').addEventListener) {
-          alert("ADDED");
           // IE9, Chrome, Safari, Opera
           document.getElementById('scroll_container').addEventListener('mousewheel', scrollHorizontally, false);
           // Firefox
