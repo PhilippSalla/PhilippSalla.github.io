@@ -488,7 +488,7 @@
     "length": 98,
     "actors": [
       "Steve Carell",
-      "Kristen Wigg"
+      "Kristen Wiig"
     ]
   },
   {
@@ -792,7 +792,7 @@
     ]
   },
   {
-    "title": "Mission: Impossible",
+    "title": "Mission: Impossible - Phantom Protokoll",
     "imdbLinkId": "tt1229238",
     "imdbCoverId": "MV5BMTM0Nzc1MTU1NV5BMl5BanBnXkFtZTcwNTg5ODc3NQ@@._V1_FMjpg_UY2048_",
     "is3d": false,
@@ -1092,7 +1092,7 @@
     ]
   },
   {
-    "title": "Star Wars: Episode 6 - Die R\u00fcckkehr der Jedi-Ritter",
+    "title": "Star Wars: Episode VI - Die R\u00fcckkehr der Jedi-Ritter",
     "imdbLinkId": "tt0086190",
     "imdbCoverId": "MV5BNmY3Yjc1OTItOTYxYi00OGQyLWIwNzItNDM0Njc1ZmQ4MjAyXkEyXkFqcGdeQXVyMTQ4NDkxNTk4._V1_FMjpg_UY2159_",
     "is3d": false,
@@ -1110,18 +1110,6 @@
     "is3d": false,
     "year": 2015,
     "length": 138,
-    "actors": [
-      "Daisy Ridley",
-      "John Boyega"
-    ]
-  },
-  {
-    "title": "Star Wars: Episode VIII - Die letzten Jedi",
-    "imdbLinkId": "tt2527338",
-    "imdbCoverId": "MV5BM2RjNDQ2NTUtMDA1Ny00ZWM5LTk2MjUtMzc5YWQ2N2E0NWExXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_FMjpg_UX1262_",
-    "is3d": false,
-    "year": 2017,
-    "length": 152,
     "actors": [
       "Daisy Ridley",
       "John Boyega"
