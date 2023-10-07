@@ -87,7 +87,13 @@ var x = setInterval(function () {
 var movieList = [{ "title": "Die Bourne Identität", "imdbCoverId": "MV5BMjA0MDcyODM3MF5BMl5BanBnXkFtZTYwNzUxNDk5._V1_FMjpg_UX334_", "imdbLinkId": "tt0258463"}];
 
 // fetch movie list
-//TODO:
+fetch("data/movies.json").then(function(response){
+  return response.json();
+}).then(function(object){
+  console.log(object);
+}).catch(function(error){
+  console.error(error);
+})
 
 // sort movie list
 //TODO:
