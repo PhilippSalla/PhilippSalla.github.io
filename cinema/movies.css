@@ -13,6 +13,7 @@
   box-sizing: border-box;
   font-family: 'Comfortaa', cursive;
   user-select: none;
+  scrollbar-color: var(--clr-accent) var(--clr-dark);
 }
 
 html, body{
