@@ -269,8 +269,8 @@ img{
   word-wrap: break-word;
   hyphens: auto;
   text-align: center;
-  font-size: 1.15rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.15rem;
   margin: 0 auto;
   font-weight: 900;
   color: var(--clr-accent);
