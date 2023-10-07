@@ -217,12 +217,10 @@ img{
   Movie scroller
 */
 .media-scroller{
-  --media-spacer: 0.5rem;
-  --card-width: 11rem;
   width: 100%;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: var(--card-width);
+  grid-auto-columns: 11rem;
   gap: 1rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -236,7 +234,7 @@ img{
   display: grid;
   grid-template-rows: min-content;
   gap: 0.25rem;
-  padding: var(--media-spacer, 1rem);
+  padding: 0.5rem;
   background-color: var(--clr-dark);
   border-radius: 0.25rem;
   box-shadow: 0.5rem 0.5rem rgb(32, 32, 32);
