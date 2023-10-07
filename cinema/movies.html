@@ -83,7 +83,23 @@
 
     <!-- Movie Cards -->
     <main>
-      <div id="scroll_container" class="media-scroller">
+      <!-- New Movies Scroller -->
+      <div id="newMoviesScroll" class="media-scroller">
+        <!-- to be filled by script -->
+      </div>
+
+      <!-- All Movies Scroller -->
+      <div id="allMoviesScroll" class="media-scroller">
+        <!-- to be filled by script -->
+      </div>
+
+      <!-- Harry Potter Scroller -->
+      <div id="HarryPotterScroll" class="media-scroller">
+        <!-- to be filled by script -->
+      </div>
+
+      <!-- Star Wars Scroller -->
+      <div id="StarWarsScroll" class="media-scroller">
         <!-- to be filled by script -->
       </div>
     </main>
@@ -96,17 +112,17 @@
           // alert("SCROLL");
           e = window.event || e;
           var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-          document.getElementById('scroll_container').scrollLeft -= (delta * 300); // Default 40
+          document.getElementById('allMoviesScroll').scrollLeft -= (delta * 300); // Default 40
           e.preventDefault();
         }
-        if (document.getElementById('scroll_container').addEventListener) {
+        if (document.getElementById('allMoviesScroll').addEventListener) {
           // IE9, Chrome, Safari, Opera
-          document.getElementById('scroll_container').addEventListener('mousewheel', scrollHorizontally, false);
+          document.getElementById('allMoviesScroll').addEventListener('mousewheel', scrollHorizontally, false);
           // Firefox
-          document.getElementById('scroll_container').addEventListener('DOMMouseScroll', scrollHorizontally, false);
+          document.getElementById('allMoviesScroll').addEventListener('DOMMouseScroll', scrollHorizontally, false);
         } else {
           // IE 6/7/8
-          document.getElementById('scroll_container').attachEvent('onmousewheel', scrollHorizontally);
+          document.getElementById('allMoviesScroll').attachEvent('onmousewheel', scrollHorizontally);
         }
       })();
     </script>

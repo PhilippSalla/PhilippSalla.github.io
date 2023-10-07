@@ -93,28 +93,30 @@ fetch("data/movies.json").then(function(response){
   movieList = object;
   console.log(movieList);
 
-  // display movie list
+  // display allmovies list
   for (const element of movieList) {
-    var newMediaElement = document.createElement("div");
-    newMediaElement.classList.add("media-element");
-
-    var newMediaImage = document.createElement("img");
-    newMediaImage.src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
-    //TODO: Add onerror redirecto to ?-image
-    newMediaElement.appendChild(newMediaImage);
-
-    var newMediaDiv = document.createElement("div");
-    var newMediaP = document.createElement("p");
-    newMediaP.classList.add("media-scroll-title");
-    newMediaP.innerText = element.title;
-    newMediaDiv.appendChild(newMediaP);
-
-    newMediaElement.appendChild(newMediaDiv);
-
-    document.getElementById("scroll_container").appendChild(newMediaElement);
+    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title)
   };
 
 }).catch(function(error){
   console.error(error);
 })
 
+function buildScrollElement(targetElement, image, title){
+  var newMediaElement = document.createElement("div");
+  newMediaElement.classList.add("media-element");
+
+  var newMediaImage = document.createElement("img");
+  newMediaImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
+  newMediaElement.appendChild(newMediaImage);
+
+  var newMediaDiv = document.createElement("div");
+  var newMediaP = document.createElement("p");
+  newMediaP.classList.add("media-scroll-title");
+  newMediaP.innerText = title;
+  newMediaDiv.appendChild(newMediaP);
+
+  newMediaElement.appendChild(newMediaDiv);
+
+  document.getElementById(targetElement).appendChild(newMediaElement);
+}
