@@ -90,7 +90,7 @@ var movieList = [{ "title": "Die Bourne Identität", "imdbCoverId": "MV5BMjA0MDc
 fetch("data/movies.json").then(function(response){
   return response.json();
 }).then(function(object){
-  movieList = object;
+  movieList = object.allMovies;
   console.log(movieList);
 
   // display allmovies list
