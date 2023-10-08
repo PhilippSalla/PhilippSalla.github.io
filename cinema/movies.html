@@ -136,18 +136,26 @@
         function scrollHorizontally(e) {
           e = window.event || e;
           var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-          document.getElementById('allMoviesScroll').scrollLeft -= (delta * 300); // Default 40
+          document.getElementById(this.id).scrollLeft -= (delta * 300); // Default 40
           e.preventDefault();
         }
-        if (document.getElementById('allMoviesScroll').addEventListener) {
-          // IE9, Chrome, Safari, Opera
-          document.getElementById('allMoviesScroll').addEventListener('mousewheel', scrollHorizontally, false);
-          // Firefox
-          document.getElementById('allMoviesScroll').addEventListener('DOMMouseScroll', scrollHorizontally, false);
-        } else {
-          // IE 6/7/8
-          document.getElementById('allMoviesScroll').attachEvent('onmousewheel', scrollHorizontally);
+        function addListener(id){
+          if (document.getElementById(id).addEventListener) {
+            // IE9, Chrome, Safari, Opera
+            document.getElementById(id).addEventListener('mousewheel', scrollHorizontally, false);
+            // Firefox
+            document.getElementById(id).addEventListener('DOMMouseScroll', scrollHorizontally, false);
+          } else {
+            // IE 6/7/8
+            document.getElementById(id).attachEvent('onmousewheel', scrollHorizontally);
+          }
         }
+        addListener("allMoviesScroll");
+        addListener("jasonBourneScroll");
+        addListener("potcScroll");
+        addListener("harryPotterScroll");
+        addListener("starWarsScroll");
+        
       })();
     </script>
   </body>
