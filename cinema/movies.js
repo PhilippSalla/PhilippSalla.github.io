@@ -84,7 +84,65 @@ var x = setInterval(function () {
 }, 1000);
 
 
-var movieList = [{ "title": "Die Bourne Identität", "imdbCoverId": "MV5BMjA0MDcyODM3MF5BMl5BanBnXkFtZTYwNzUxNDk5._V1_FMjpg_UX334_", "imdbLinkId": "tt0258463"}];
+function searchMovie(searchString){
+  document.getElementById("searchResultScroll").replaceChildren();
+  if(searchString == ""){
+    document.getElementById("searchResultsContainer").hidden = true;
+    return;
+  }
+  searchString = searchString.toLowerCase();
+  const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
+  var results = [];
+
+  // fetch all movies
+  fetch("data/movies.json").then(function(response){
+    // return as json object
+    return response.json();
+  }).then(function(object){
+    // success condition
+
+    // get each list
+    for(const key of keyList){
+      // iterate all lists and iterate each list for search string
+      for(const element of object[key]){
+        console.log(element.title.toLowerCase());
+        console.log(element.title.toLowerCase().indexOf(searchString));
+        console.log(searchString);
+
+        if ((element.title).toLowerCase().indexOf(searchString) >= 0||
+          (element.year).toString().toLowerCase().indexOf(searchString) >= 0 ||
+          (element.actors[0]).toLowerCase().indexOf(searchString) >= 0 ||
+          (element.actors[1]).toLowerCase().indexOf(searchString) >= 0){
+            results.push(element);
+            console.log("Pushed");
+          }
+      }
+    }
+
+    // evaluate
+    if(results.length >= 1){
+      // display results
+      for (const element of results) {
+        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title);
+      };
+      document.getElementById("searchResultsContainer").hidden = false;
+    }else{
+      // display error
+      var newNode = document.createElement("p");
+      newNode.innerHTML = "Keine Ergebnisse";
+      document.getElementById("searchResultsContainer").appendChild(newNode);
+      document.getElementById("searchResultsContainer").hidden = false;
+    }
+
+
+  }).catch(function(error){
+    // error condition
+    console.error(error);
+  })
+}
+
+
+var movieList = [];
 
 // fetch movie list
 fetch("data/movies.json").then(function(response){

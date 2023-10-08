@@ -67,15 +67,15 @@
     <div class="full-width search-container">
 
       <!-- clear button -->
-      <button type="button" class="btn" title="Suche Löschen">
+      <button type="button" class="btn" title="Suche Löschen" onclick="searchMovie(''); document.getElementById('searchBox').value = '';">
         <img src="https://cdn-icons-png.flaticon.com/512/3858/3858381.png" alt="clear button icon">
       </button>
 
       <!-- search text box -->
-      <input type="text" name="search" id="searchBox" class="search-textbox" placeholder="DEAKTIVIERT - Suchen" title="Nach Film Suchen" disabled>
+      <input type="text" name="search" id="searchBox" class="search-textbox" placeholder="Suchen" title="Nach Film Suchen">
 
       <!-- search button -->
-      <button type="submit" class="btn" title="Suche Starten">
+      <button type="submit" class="btn" title="Suche Starten" onclick="searchMovie(document.getElementById('searchBox').value)">
         <img src="https://cdn-icons-png.flaticon.com/512/954/954591.png" alt="search button icon">
       </button>
 
@@ -83,6 +83,18 @@
 
     <!-- Movie Cards -->
     <main>
+      <div id="searchResultsContainer" hidden="true">
+        <!-- search results -->
+        <div class="scroll-title-container">
+          <h1>Suchergebnisse</h1>
+          <hr>
+        </div>
+        <!-- All Movies Scroller -->
+        <div id="searchResultScroll" class="media-scroller">
+          <!-- to be filled by script -->
+        </div>
+      </div>
+
       <div class="scroll-title-container">
         <h1>Alle Filme</h1>
         <hr>
