@@ -141,6 +141,13 @@ function searchMovie(searchString){
   })
 }
 
+document.getElementById("searchBox").addEventListener("keydown", function(event){
+  if(event.key === "Enter"){
+    event.preventDefault();
+    document.getElementById("submitBtn").click();
+  }
+});
+
 
 var movieList = [];
 
