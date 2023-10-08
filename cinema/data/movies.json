@@ -186,62 +186,14 @@
       ]
     },
     {
-      "title": "Fluch der Karibik",
+      "title": "Fluch der Karibik (1-5) ",
       "imdbLinkId": "tt0325980",
       "imdbCoverId": "MV5BMTIzODgzNDM5M15BMl5BanBnXkFtZTcwMjU3NDAwMQ@@._V1_FMjpg_UX338_",
       "is3d": false,
       "year": 2003,
-      "length": 143,
+      "length": 729,
       "actors": [
         "Johnney Depp",
-        "Geoffrey Rush"
-      ]
-    },
-    {
-      "title": "Fluch der Karibik 2",
-      "imdbLinkId": "tt0383574",
-      "imdbCoverId": "MV5BNDc4ODQwOTI1NF5BMl5BanBnXkFtZTcwMzE0ODQzMQ@@._V1_FMjpg_UX356_",
-      "is3d": false,
-      "year": 2006,
-      "length": 151,
-      "actors": [
-        "Johnny Depp",
-        "Orlando Bloom"
-      ]
-    },
-    {
-      "title": "Fluch der Karibik - Am Ende der Welt",
-      "imdbLinkId": "tt0449088",
-      "imdbCoverId": "MV5BYjE3ZWNkMDctMWI5MS00YzJmLThlOWMtNTIxZDU4YmEwYjQ3XkEyXkFqcGdeQXVyMDAwMDAwNA@@._V1_FMjpg_UX298_",
-      "is3d": false,
-      "year": 2007,
-      "length": 169,
-      "actors": [
-        "Johnny Depp",
-        "Orlando Bloom"
-      ]
-    },
-    {
-      "title": "Fluch der Karibik - Fremde Gezeiten",
-      "imdbLinkId": "tt1298650",
-      "imdbCoverId": "MV5BZmExYmFlYmEtNDQ1Ni00OTBjLTgxYTgtYTIyOTc5NzRiNDBiXkEyXkFqcGdeQXVyMDAwMDAwNA@@._V1_FMjpg_UX388_",
-      "is3d": false,
-      "year": 2011,
-      "length": 137,
-      "actors": [
-        "Johnny Depp",
-        "Penelope Cruz"
-      ]
-    },
-    {
-      "title": "Fluch der Karibik - Salazars Rache",
-      "imdbLinkId": "tt1790809",
-      "imdbCoverId": "MV5BNmFhNmVkYzItNjQ5Mi00ZDBkLTg3ZjItMjhkZTAyOTliNTNkXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY3000_",
-      "is3d": false,
-      "year": 2017,
-      "length": 129,
-      "actors": [
-        "Johnny Depp",
         "Geoffrey Rush"
       ]
     },
@@ -282,87 +234,15 @@
       ]
     },
     {
-      "title": "Harry Potter und der Stein der Weisen",
+      "title": "Harry Potter (1-7)",
       "imdbLinkId": "tt0241527",
       "imdbCoverId": "MV5BY2I4NWE2OTAtMzZhNC00MjgzLTg2ZDEtMTllYWI5MDdiMWE0XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX611_",
       "is3d": false,
       "year": 2001,
-      "length": 152,
+      "length": 1037,
       "actors": [
         "Daniel Radcliffe",
         "Rupert Grint"
-      ]
-    },
-    {
-      "title": "Harry Potter und die Kammer des Schreckens",
-      "imdbLinkId": "tt0304141",
-      "imdbCoverId": "MV5BZDdlZTA4MDItZmY1NC00NTUwLThkYTQtNDdkZGM2MmY5ODk3XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
-      "is3d": false,
-      "year": 2002,
-      "length": 161,
-      "actors": [
-        "Daniel Radcliffe",
-        "Rupert Grint"
-      ]
-    },
-    {
-      "title": "Harry Potter und der Feuerkelch",
-      "imdbLinkId": "tt0330373",
-      "imdbCoverId": "MV5BZDhiM2MwYTItMGE0Ni00NzAwLWIxMjItZGNiN2Q3ZGZiYjY1XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
-      "is3d": false,
-      "year": 2005,
-      "length": 157,
-      "actors": [
-        "Daniel Radcliffe",
-        "Emma Watson"
-      ]
-    },
-    {
-      "title": "Harry Potter und der Orden des Ph\u00f6nix",
-      "imdbLinkId": "tt0373889",
-      "imdbCoverId": "MV5BOGE5NGViOWYtMmFlYy00YTc0LWI4MmEtOWE1YmYyZTRlYTNmXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
-      "is3d": false,
-      "year": 2007,
-      "length": 138,
-      "actors": [
-        "Daniel Radcliffe",
-        "Emma Watson"
-      ]
-    },
-    {
-      "title": "Harry Potter und der Halbblutprinz",
-      "imdbLinkId": "tt0417741",
-      "imdbCoverId": "MV5BMTI2ZGZhYmYtMWIxNy00MjBkLTg3YzktYTg0MjQ1ODA5ZGFmXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX1277_",
-      "is3d": false,
-      "year": 2009,
-      "length": 153,
-      "actors": [
-        "Daniel Radcliffe",
-        "Emma Watson"
-      ]
-    },
-    {
-      "title": "Harry Potter und die Heiligt\u00fcmer des Todes: Teil 1",
-      "imdbLinkId": "tt0926084",
-      "imdbCoverId": "MV5BZTM1ODhmOWEtYTk2Yy00NGY4LTg1YzMtODQxM2Q2MDVlNTA3XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
-      "is3d": false,
-      "year": 2010,
-      "length": 146,
-      "actors": [
-        "Daniel Radcliffe",
-        "Emma Watson"
-      ]
-    },
-    {
-      "title": "Harry Potter und die Heiligt\u00fcmer des Todes: Teil 2",
-      "imdbLinkId": "tt1201607",
-      "imdbCoverId": "MV5BNWQ4NzgyZTctNDg2My00MDU1LTkxODctYTI3MTI1YTFjNjdiXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX990_",
-      "is3d": false,
-      "year": 2011,
-      "length": 130,
-      "actors": [
-        "Daniel Radcliffe",
-        "Emma Watson"
       ]
     },
     {
@@ -966,135 +846,15 @@
       ]
     },
     {
-      "title": "Star Wars: Episode 1 - Die dunkle Bedrohung",
+      "title": "Star Wars: Episodes I-IX & Solo & RogeOne",
       "imdbLinkId": "tt0120915",
       "imdbCoverId": "MV5BN2E1OTNjYzUtODM1OC00MmEwLWIzYjQtNjk5NzE0NDY5Y2M5XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX500_",
       "is3d": false,
       "year": 1999,
-      "length": 136,
+      "length": 1493,
       "actors": [
         "Ewan McGregor",
         "Liam Neeson"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode II - Angriff der Klonkrieger",
-      "imdbLinkId": "tt0121765",
-      "imdbCoverId": "MV5BZjNjZjhjZTYtNmM5Yi00ZjE5LWE5Y2YtMTQzMTAzMDgxMjEyXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX600_",
-      "is3d": false,
-      "year": 2002,
-      "length": 142,
-      "actors": [
-        "Hayden Christensen",
-        "Natalie Portman"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode III - Die Rache der Sith",
-      "imdbLinkId": "tt0121766",
-      "imdbCoverId": "MV5BNGM2MWVhMWItODc0YS00NTY1LThkMjktYWVkMTZlZmI2YmRmXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX838_",
-      "is3d": false,
-      "year": 2005,
-      "length": 140,
-      "actors": [
-        "Hayden Christensen",
-        "Natalie Portman"
-      ]
-    },
-    {
-      "title": "Solo: A Star Wars Story",
-      "imdbLinkId": "tt3778644",
-      "imdbCoverId": "MV5BZmY2NjBiMjItNDNjMi00YzMyLTlkY2UtZmY2Y2M4ZDg2OTk4XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX1132_",
-      "is3d": false,
-      "year": 2018,
-      "length": 135,
-      "actors": [
-        "Alden Ehrenreich",
-        "Woody Harrelson"
-      ]
-    },
-    {
-      "title": "Star Wars: Rogue One",
-      "imdbLinkId": "tt3778644",
-      "imdbCoverId": "MV5BN2QzNDFlNjgtNGEwNy00M2JiLTk4MmQtNzYyMGJhMTQyMmI3XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX315_",
-      "is3d": false,
-      "year": 2016,
-      "length": 133,
-      "actors": [
-        "Felicity Jones",
-        "Diego Luna"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode IV - Eine neue Hoffnung",
-      "imdbLinkId": "tt0076759",
-      "imdbCoverId": "MV5BYWFlMzZmMGUtOThlNS00YzQ4LWFlZTUtYzE0ZmUyMGI1MjA4XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_FMjpg_UY2684_",
-      "is3d": false,
-      "year": 1977,
-      "length": 121,
-      "actors": [
-        "Mark Hamill",
-        "Harrison Ford"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode V - Das Imperium schl\u00e4gt zur\u00fcck",
-      "imdbLinkId": "tt0080684",
-      "imdbCoverId": "MV5BNmMxNWViNDUtMzUzNy00NjM2LWE2Y2QtMzY5NDUzMTExYjM0XkEyXkFqcGdeQXVyMTMxODYzNjg@._V1_FMjpg_UX838_",
-      "is3d": false,
-      "year": 1980,
-      "length": 124,
-      "actors": [
-        "Mark Hamill",
-        "Harrison Ford"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode VI - Die R\u00fcckkehr der Jedi-Ritter",
-      "imdbLinkId": "tt0086190",
-      "imdbCoverId": "MV5BNmY3Yjc1OTItOTYxYi00OGQyLWIwNzItNDM0Njc1ZmQ4MjAyXkEyXkFqcGdeQXVyMTQ4NDkxNTk4._V1_FMjpg_UY2159_",
-      "is3d": false,
-      "year": 1983,
-      "length": 131,
-      "actors": [
-        "Mark Hamill",
-        "Harrison Ford"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode VII - Das Erwachen der Macht",
-      "imdbLinkId": "tt2488496",
-      "imdbCoverId": "MV5BYmI3ZDhhYWItYzRkMy00Yzg4LWFhMzYtOTViMzNjZjBiMWRiXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX509_",
-      "is3d": false,
-      "year": 2015,
-      "length": 138,
-      "actors": [
-        "Daisy Ridley",
-        "John Boyega"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode VIII: Die letzten Jedi",
-      "imdbLinkId": "tt2527336",
-      "imdbCoverId": "MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_FMjpg_UX800_",
-      "is3d": false,
-      "year": 2017,
-      "length": 152,
-      "actors": [
-        "Daisy Ridley",
-        "John Boyega"
-      ]
-    },
-    {
-      "title": "Star Wars: Episode IX - Der Aufstieg Skywalkers",
-      "imdbLinkId": "tt2527338",
-      "imdbCoverId": "MV5BM2RjNDQ2NTUtMDA1Ny00ZWM5LTk2MjUtMzc5YWQ2N2E0NWExXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_FMjpg_UX1262_",
-      "is3d": false,
-      "year": 2019,
-      "length": 141,
-      "actors": [
-        "Daisy Ridley",
-        "John Boyega"
       ]
     },
     {
@@ -1339,6 +1099,294 @@
       "actors": [
         "Matt Damon",
         "Tommy Lee Jones"
+      ]
+    }
+  ],
+
+
+  "piratesOfTheCaribbean":[
+    {
+      "title": "Fluch der Karibik",
+      "imdbLinkId": "tt0325980",
+      "imdbCoverId": "MV5BMTIzODgzNDM5M15BMl5BanBnXkFtZTcwMjU3NDAwMQ@@._V1_FMjpg_UX338_",
+      "is3d": false,
+      "year": 2003,
+      "length": 143,
+      "actors": [
+        "Johnney Depp",
+        "Geoffrey Rush"
+      ]
+    },
+    {
+      "title": "Fluch der Karibik 2",
+      "imdbLinkId": "tt0383574",
+      "imdbCoverId": "MV5BNDc4ODQwOTI1NF5BMl5BanBnXkFtZTcwMzE0ODQzMQ@@._V1_FMjpg_UX356_",
+      "is3d": false,
+      "year": 2006,
+      "length": 151,
+      "actors": [
+        "Johnny Depp",
+        "Orlando Bloom"
+      ]
+    },
+    {
+      "title": "Fluch der Karibik - Am Ende der Welt",
+      "imdbLinkId": "tt0449088",
+      "imdbCoverId": "MV5BYjE3ZWNkMDctMWI5MS00YzJmLThlOWMtNTIxZDU4YmEwYjQ3XkEyXkFqcGdeQXVyMDAwMDAwNA@@._V1_FMjpg_UX298_",
+      "is3d": false,
+      "year": 2007,
+      "length": 169,
+      "actors": [
+        "Johnny Depp",
+        "Orlando Bloom"
+      ]
+    },
+    {
+      "title": "Fluch der Karibik - Fremde Gezeiten",
+      "imdbLinkId": "tt1298650",
+      "imdbCoverId": "MV5BZmExYmFlYmEtNDQ1Ni00OTBjLTgxYTgtYTIyOTc5NzRiNDBiXkEyXkFqcGdeQXVyMDAwMDAwNA@@._V1_FMjpg_UX388_",
+      "is3d": false,
+      "year": 2011,
+      "length": 137,
+      "actors": [
+        "Johnny Depp",
+        "Penelope Cruz"
+      ]
+    },
+    {
+      "title": "Fluch der Karibik - Salazars Rache",
+      "imdbLinkId": "tt1790809",
+      "imdbCoverId": "MV5BNmFhNmVkYzItNjQ5Mi00ZDBkLTg3ZjItMjhkZTAyOTliNTNkXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY3000_",
+      "is3d": false,
+      "year": 2017,
+      "length": 129,
+      "actors": [
+        "Johnny Depp",
+        "Geoffrey Rush"
+      ]
+    }
+  ],
+
+
+  "harryPotter":[
+    {
+      "title": "Harry Potter und der Stein der Weisen",
+      "imdbLinkId": "tt0241527",
+      "imdbCoverId": "MV5BY2I4NWE2OTAtMzZhNC00MjgzLTg2ZDEtMTllYWI5MDdiMWE0XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX611_",
+      "is3d": false,
+      "year": 2001,
+      "length": 152,
+      "actors": [
+        "Daniel Radcliffe",
+        "Rupert Grint"
+      ]
+    },
+    {
+      "title": "Harry Potter und die Kammer des Schreckens",
+      "imdbLinkId": "tt0304141",
+      "imdbCoverId": "MV5BZDdlZTA4MDItZmY1NC00NTUwLThkYTQtNDdkZGM2MmY5ODk3XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
+      "is3d": false,
+      "year": 2002,
+      "length": 161,
+      "actors": [
+        "Daniel Radcliffe",
+        "Rupert Grint"
+      ]
+    },
+    {
+      "title": "Harry Potter und der Feuerkelch",
+      "imdbLinkId": "tt0330373",
+      "imdbCoverId": "MV5BZDhiM2MwYTItMGE0Ni00NzAwLWIxMjItZGNiN2Q3ZGZiYjY1XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
+      "is3d": false,
+      "year": 2005,
+      "length": 157,
+      "actors": [
+        "Daniel Radcliffe",
+        "Emma Watson"
+      ]
+    },
+    {
+      "title": "Harry Potter und der Orden des Ph\u00f6nix",
+      "imdbLinkId": "tt0373889",
+      "imdbCoverId": "MV5BOGE5NGViOWYtMmFlYy00YTc0LWI4MmEtOWE1YmYyZTRlYTNmXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
+      "is3d": false,
+      "year": 2007,
+      "length": 138,
+      "actors": [
+        "Daniel Radcliffe",
+        "Emma Watson"
+      ]
+    },
+    {
+      "title": "Harry Potter und der Halbblutprinz",
+      "imdbLinkId": "tt0417741",
+      "imdbCoverId": "MV5BMTI2ZGZhYmYtMWIxNy00MjBkLTg3YzktYTg0MjQ1ODA5ZGFmXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX1277_",
+      "is3d": false,
+      "year": 2009,
+      "length": 153,
+      "actors": [
+        "Daniel Radcliffe",
+        "Emma Watson"
+      ]
+    },
+    {
+      "title": "Harry Potter und die Heiligt\u00fcmer des Todes: Teil 1",
+      "imdbLinkId": "tt0926084",
+      "imdbCoverId": "MV5BZTM1ODhmOWEtYTk2Yy00NGY4LTg1YzMtODQxM2Q2MDVlNTA3XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY2100_",
+      "is3d": false,
+      "year": 2010,
+      "length": 146,
+      "actors": [
+        "Daniel Radcliffe",
+        "Emma Watson"
+      ]
+    },
+    {
+      "title": "Harry Potter und die Heiligt\u00fcmer des Todes: Teil 2",
+      "imdbLinkId": "tt1201607",
+      "imdbCoverId": "MV5BNWQ4NzgyZTctNDg2My00MDU1LTkxODctYTI3MTI1YTFjNjdiXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX990_",
+      "is3d": false,
+      "year": 2011,
+      "length": 130,
+      "actors": [
+        "Daniel Radcliffe",
+        "Emma Watson"
+      ]
+    }
+  ],
+
+
+  "starWars":[
+    {
+      "title": "Star Wars: Episode I - Die dunkle Bedrohung",
+      "imdbLinkId": "tt0120915",
+      "imdbCoverId": "MV5BN2E1OTNjYzUtODM1OC00MmEwLWIzYjQtNjk5NzE0NDY5Y2M5XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX500_",
+      "is3d": false,
+      "year": 1999,
+      "length": 136,
+      "actors": [
+        "Ewan McGregor",
+        "Liam Neeson"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode II - Angriff der Klonkrieger",
+      "imdbLinkId": "tt0121765",
+      "imdbCoverId": "MV5BZjNjZjhjZTYtNmM5Yi00ZjE5LWE5Y2YtMTQzMTAzMDgxMjEyXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX600_",
+      "is3d": false,
+      "year": 2002,
+      "length": 142,
+      "actors": [
+        "Hayden Christensen",
+        "Natalie Portman"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode III - Die Rache der Sith",
+      "imdbLinkId": "tt0121766",
+      "imdbCoverId": "MV5BNGM2MWVhMWItODc0YS00NTY1LThkMjktYWVkMTZlZmI2YmRmXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX838_",
+      "is3d": false,
+      "year": 2005,
+      "length": 140,
+      "actors": [
+        "Hayden Christensen",
+        "Natalie Portman"
+      ]
+    },
+    {
+      "title": "Solo: A Star Wars Story",
+      "imdbLinkId": "tt3778644",
+      "imdbCoverId": "MV5BZmY2NjBiMjItNDNjMi00YzMyLTlkY2UtZmY2Y2M4ZDg2OTk4XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX1132_",
+      "is3d": false,
+      "year": 2018,
+      "length": 135,
+      "actors": [
+        "Alden Ehrenreich",
+        "Woody Harrelson"
+      ]
+    },
+    {
+      "title": "Star Wars: Rogue One",
+      "imdbLinkId": "tt3778644",
+      "imdbCoverId": "MV5BN2QzNDFlNjgtNGEwNy00M2JiLTk4MmQtNzYyMGJhMTQyMmI3XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX315_",
+      "is3d": false,
+      "year": 2016,
+      "length": 133,
+      "actors": [
+        "Felicity Jones",
+        "Diego Luna"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode IV - Eine neue Hoffnung",
+      "imdbLinkId": "tt0076759",
+      "imdbCoverId": "MV5BYWFlMzZmMGUtOThlNS00YzQ4LWFlZTUtYzE0ZmUyMGI1MjA4XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_FMjpg_UY2684_",
+      "is3d": false,
+      "year": 1977,
+      "length": 121,
+      "actors": [
+        "Mark Hamill",
+        "Harrison Ford"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode V - Das Imperium schl\u00e4gt zur\u00fcck",
+      "imdbLinkId": "tt0080684",
+      "imdbCoverId": "MV5BNmMxNWViNDUtMzUzNy00NjM2LWE2Y2QtMzY5NDUzMTExYjM0XkEyXkFqcGdeQXVyMTMxODYzNjg@._V1_FMjpg_UX838_",
+      "is3d": false,
+      "year": 1980,
+      "length": 124,
+      "actors": [
+        "Mark Hamill",
+        "Harrison Ford"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode VI - Die R\u00fcckkehr der Jedi-Ritter",
+      "imdbLinkId": "tt0086190",
+      "imdbCoverId": "MV5BNmY3Yjc1OTItOTYxYi00OGQyLWIwNzItNDM0Njc1ZmQ4MjAyXkEyXkFqcGdeQXVyMTQ4NDkxNTk4._V1_FMjpg_UY2159_",
+      "is3d": false,
+      "year": 1983,
+      "length": 131,
+      "actors": [
+        "Mark Hamill",
+        "Harrison Ford"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode VII - Das Erwachen der Macht",
+      "imdbLinkId": "tt2488496",
+      "imdbCoverId": "MV5BYmI3ZDhhYWItYzRkMy00Yzg4LWFhMzYtOTViMzNjZjBiMWRiXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_FMjpg_UX509_",
+      "is3d": false,
+      "year": 2015,
+      "length": 138,
+      "actors": [
+        "Daisy Ridley",
+        "John Boyega"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode VIII: Die letzten Jedi",
+      "imdbLinkId": "tt2527336",
+      "imdbCoverId": "MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_FMjpg_UX800_",
+      "is3d": false,
+      "year": 2017,
+      "length": 152,
+      "actors": [
+        "Daisy Ridley",
+        "John Boyega"
+      ]
+    },
+    {
+      "title": "Star Wars: Episode IX - Der Aufstieg Skywalkers",
+      "imdbLinkId": "tt2527338",
+      "imdbCoverId": "MV5BM2RjNDQ2NTUtMDA1Ny00ZWM5LTk2MjUtMzc5YWQ2N2E0NWExXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_FMjpg_UX1262_",
+      "is3d": false,
+      "year": 2019,
+      "length": 141,
+      "actors": [
+        "Daisy Ridley",
+        "John Boyega"
       ]
     }
   ]
