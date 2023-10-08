@@ -128,7 +128,8 @@ function searchMovie(searchString){
       document.getElementById("searchResultsContainer").hidden = false;
     }else{
       // display error
-      var newNode = document.createElement("p");
+      var newNode = document.createElement("div");
+      newNode.classList.add("scroll-title-container");
       newNode.innerHTML = "Keine Ergebnisse";
       document.getElementById("searchResultsContainer").appendChild(newNode);
       document.getElementById("searchResultsContainer").hidden = false;
