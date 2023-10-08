@@ -136,7 +136,7 @@
         function scrollHorizontally(e) {
           e = window.event || e;
           var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-          document.getElementById(this.id).scrollLeft -= (delta * 300); // Default 40
+          document.getElementById(this.id).scrollLeft -= (delta * 42); // Default 40
           e.preventDefault();
         }
         function addListener(id){
@@ -155,7 +155,7 @@
         addListener("potcScroll");
         addListener("harryPotterScroll");
         addListener("starWarsScroll");
-        
+
       })();
     </script>
   </body>
