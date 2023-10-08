@@ -227,6 +227,8 @@ img{
   overscroll-behavior-inline: contain;
   height: max-content;
   padding: 2rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
   scroll-behavior: smooth;
 }
 
@@ -276,11 +278,28 @@ img{
   color: var(--clr-accent);
 }
 
+.scroll-title-container{
+  width: 100%;
+  padding: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.scroll-title-container > h1,
+.scroll-title-container > h2{
+  width: fit-content;
+  border-radius: 0.5rem;
+  border-left: 0.2rem solid var(--clr-light);
+  padding-left: 0.5rem;
+  border-right: 0.2rem solid var(--clr-light);
+  padding-right: 0.5rem;
+}
+
 /*
   responsive
 */
 @media (min-width: 61rem) {
-  .top-container, .search-container, .media-scroller{
+  .top-container, .search-container, .media-scroller, .scroll-title-container{
     width: 60rem;
     margin: 0 auto;
   }

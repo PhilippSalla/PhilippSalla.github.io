@@ -91,11 +91,34 @@ fetch("data/movies.json").then(function(response){
   return response.json();
 }).then(function(object){
   movieList = object.allMovies;
-  console.log(movieList);
+  jbList = object.jasonBourne;
+  potcList = object.piratesOfTheCaribbean;
+  hpList = object.harryPotter;
+  swList = object.starWars;
 
   // display allmovies list
   for (const element of movieList) {
     buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title)
+  };
+
+  // display jason bourne list
+  for (const element of jbList) {
+    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title)
+  };
+
+  // display pirates of the caribbean list
+  for (const element of potcList) {
+    buildScrollElement("potcScroll", element.imdbCoverId, element.title)
+  };
+
+  // display harry potter list
+  for (const element of hpList) {
+    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title)
+  };
+
+  // display star wars list
+  for (const element of swList) {
+    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title)
   };
 
 }).catch(function(error){
