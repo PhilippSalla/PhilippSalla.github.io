@@ -1,7 +1,7 @@
 // keyList: has to be changed if new movie groups are added or removed !
 const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
 
-var movieDateTime = "Jul 13, 2000 17:00:00";
+getCurrentMovie();
 
 function getCurrentMovie(){
   // fetch current movie data
@@ -28,8 +28,7 @@ function getCurrentMovie(){
             document.getElementById("nextMovieText").innerHTML = element.title + "<br>" + element.year + " - " + element.length + " min";
             document.getElementById("nextMovieImage").src = element.imdbCoverId;
 
-            movieDateTime = currentObject.dateTime;
-            alert("TO BE SET " + movieDateTime);
+            setUpTimer(currentObject.dateTime);
           }
         }
       }
@@ -46,95 +45,94 @@ function getCurrentMovie(){
   });
 }
 
+function setUpTimer(movieDateTime){
 
+  // var dateObj = new Date("Oct 4, 2023 17:00:00")
+  alert("AFTER FUNCITON " + movieDateTime);
+  var dateObj =  new Date(movieDateTime);
+  var countDownDate = dateObj.getTime();
 
-// var dateObj = new Date("Oct 4, 2023 17:00:00")
-getCurrentMovie();
-alert(movieDateTime);
-var dateObj =  new Date(movieDateTime);
-var countDownDate = dateObj.getTime();
+  var dateCode = dateObj.getDay();
+  switch (dateCode){
+    case 0:
+      dateCode = "Sonntag";
+      break;
+    case 1:
+      dateCode = "Montag";
+      break;
+    case 2:
+      dateCode = "Dienstag";
+      break;
+    case 3:
+      dateCode = "Mittwoch";
+      break;
+    case 4:
+      dateCode = "Donnerstag";
+      break;
+    case 5:
+      dateCode = "Freitag";
+      break;
+    case 6:
+      dateCode = "Samstag";
+      break;
+  }
+  document.getElementById('movieDay').innerHTML = dateCode;
 
-var dateCode = dateObj.getDay();
-switch (dateCode){
-  case 0:
-    dateCode = "Sonntag";
-    break;
-  case 1:
-    dateCode = "Montag";
-    break;
-  case 2:
-    dateCode = "Dienstag";
-    break;
-  case 3:
-    dateCode = "Mittwoch";
-    break;
-  case 4:
-    dateCode = "Donnerstag";
-    break;
-  case 5:
-    dateCode = "Freitag";
-    break;
-  case 6:
-    dateCode = "Samstag";
-    break;
+  var targetHours = dateObj.getHours();
+  var targetMinutes = dateObj.getMinutes();
+  var hourFill = "0";
+  var minuteFill = "0";
+  if (targetHours >= 10){
+    hourFill = ""
+  }
+  if (targetMinutes >= 10){
+    minuteFill = ""
+  }
+  document.getElementById('movieTime').innerHTML = hourFill + targetHours + " : " + minuteFill + targetMinutes;
+
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    var d = "0"
+    if(days >= 10){
+      d = ""
+    }
+    var h = "0"
+    if (hours >= 10) {
+      h = ""
+    }
+    var m = "0"
+    if (minutes >= 10) {
+      m = ""
+    }
+    var s = "0"
+    if (seconds >= 10) {
+      s = ""
+    }
+
+    document.getElementById("timer").innerHTML = d + days + "d " + h + hours + "h "
+      + m + minutes + "m " + s + seconds + "s ";
+
+    if (distance < 0) {
+      document.getElementById("timer").innerHTML = "L Ä U F T";
+      document.getElementById("cinemaAndTime").classList.add("ani-accent-fade");
+    }
+
+    if (distance < -18013433) { // about 6 hours
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
+      document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
+      document.getElementById('movieTime').innerHTML = " - - : - - ";
+      document.getElementById('movieDay').innerHTML = "- ? -";
+    }
+  }, 1000);
 }
-document.getElementById('movieDay').innerHTML = dateCode;
-
-var targetHours = dateObj.getHours();
-var targetMinutes = dateObj.getMinutes();
-var hourFill = "0";
-var minuteFill = "0";
-if (targetHours >= 10){
-  hourFill = ""
-}
-if (targetMinutes >= 10){
-  minuteFill = ""
-}
-document.getElementById('movieTime').innerHTML = hourFill + targetHours + " : " + minuteFill + targetMinutes;
-
-var x = setInterval(function () {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  var d = "0"
-  if(days >= 10){
-    d = ""
-  }
-  var h = "0"
-  if (hours >= 10) {
-    h = ""
-  }
-  var m = "0"
-  if (minutes >= 10) {
-    m = ""
-  }
-  var s = "0"
-  if (seconds >= 10) {
-    s = ""
-  }
-
-  document.getElementById("timer").innerHTML = d + days + "d " + h + hours + "h "
-    + m + minutes + "m " + s + seconds + "s ";
-
-  if (distance < 0) {
-    document.getElementById("timer").innerHTML = "L Ä U F T";
-    document.getElementById("cinemaAndTime").classList.add("ani-accent-fade");
-  }
-
-  if (distance < -18013433) { // about 6 hours
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
-    document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
-    document.getElementById('movieTime').innerHTML = " - - : - - ";
-    document.getElementById('movieDay').innerHTML = "- ? -";
-  }
-}, 1000);
-
 
 function searchMovie(searchString){
   document.getElementById("searchResultScroll").replaceChildren();
