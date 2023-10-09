@@ -1,56 +1,57 @@
 // keyList: has to be changed if new movie groups are added or removed !
 const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
 
+var movieDateTime = "Jul 13, 2000 17:00:00";
 
-
-// fetch current movie data
-fetch("data/current.json").then(function(response){
-  return response.json();
-
-}).then(function(currentObject){
-  // Success condition
-
-  // fetch all movies
-  fetch("data/movies.json").then(function(response){
+function getCurrentMovie(){
+  // fetch current movie data
+  fetch("data/current.json").then(function(response){
     return response.json();
-  }).then(function(object){
-    // Success condition for all movies file
 
-    // Find title from current movies file
-    // TODO:
-    // get each list
-    // TODO: add boolean to track if targetet title was found
-    for (const key of keyList) {
-      // iterate all lists and iterate each list for search string
-      for (const element of object[key]) {
+  }).then(function(currentObject){
+    // Success condition
 
-        if (element.title === currentObject.title) {
-          // title found
-          // TODO: change boolen to true
+    // fetch all movies
+    fetch("data/movies.json").then(function(response){
+      return response.json();
+    }).then(function(object){
+      // Success condition for all movies file
 
-          // put details in container and return
+      // get each list
+      for (const key of keyList) {
+        // iterate all lists and iterate each list for search string
+        for (const element of object[key]) {
+
+          if (element.title === currentObject.title) {
+            // title found
+
+            document.getElementById("nextMovieText").innerHTML = element.title + "<br>" + element.year + " - " + element.length + " min";
+            document.getElementById("nextMovieImage").src = element.imdbCoverId;
+
+            movieDateTime = currentObject.dateTime;
+            alert("TO BE SET " + movieDateTime);
+          }
         }
       }
-    }
 
-    // Put found movie details in top container
-    // TODO:
+      // title not found
 
-    // On error put default image and details into top container
-    // TODO:
-
+    }).catch(function(error){
+      // Error condition for all movies, abort process
+      console.error(error);
+    });
   }).catch(function(error){
-    // Error condition for all movies, abort process
+    // Error condition
     console.error(error);
-  })
-}).catch(function(error){
-  // Error condition
-  console.error(error);
-})
+  });
+}
 
-// TODO: create date object from fetched date string
-// TODO: on error use date 0 (nothing planned will be displayed)
-var dateObj = new Date("Oct 4, 2023 17:00:00")
+
+
+// var dateObj = new Date("Oct 4, 2023 17:00:00")
+getCurrentMovie();
+alert(movieDateTime);
+var dateObj =  new Date(movieDateTime);
 var countDownDate = dateObj.getTime();
 
 var dateCode = dateObj.getDay();
