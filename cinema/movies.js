@@ -1,4 +1,55 @@
+// keyList: has to be changed if new movie groups are added or removed !
+const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
 
+
+
+// fetch current movie data
+fetch("data/current.json").then(function(response){
+  return response.json();
+
+}).then(function(currentObject){
+  // Success condition
+
+  // fetch all movies
+  fetch("data/movies.json").then(function(response){
+    return response.json();
+  }).then(function(object){
+    // Success condition for all movies file
+
+    // Find title from current movies file
+    // TODO:
+    // get each list
+    // TODO: add boolean to track if targetet title was found
+    for (const key of keyList) {
+      // iterate all lists and iterate each list for search string
+      for (const element of object[key]) {
+
+        if (element.title === currentObject.title) {
+          // title found
+          // TODO: change boolen to true
+
+          // put details in container and return
+        }
+      }
+    }
+
+    // Put found movie details in top container
+    // TODO:
+
+    // On error put default image and details into top container
+    // TODO:
+
+  }).catch(function(error){
+    // Error condition for all movies, abort process
+    console.error(error);
+  })
+}).catch(function(error){
+  // Error condition
+  console.error(error);
+})
+
+// TODO: create date object from fetched date string
+// TODO: on error use date 0 (nothing planned will be displayed)
 var dateObj = new Date("Oct 4, 2023 17:00:00")
 var countDownDate = dateObj.getTime();
 
@@ -91,7 +142,6 @@ function searchMovie(searchString){
     return;
   }
   searchString = searchString.toLowerCase();
-  const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
   var results = [];
 
   // fetch all movies
@@ -105,16 +155,12 @@ function searchMovie(searchString){
     for(const key of keyList){
       // iterate all lists and iterate each list for search string
       for(const element of object[key]){
-        console.log(element.title.toLowerCase());
-        console.log(element.title.toLowerCase().indexOf(searchString));
-        console.log(searchString);
 
         if ((element.title).toLowerCase().indexOf(searchString) >= 0||
           (element.year).toString().toLowerCase().indexOf(searchString) >= 0 ||
           (element.actors[0]).toLowerCase().indexOf(searchString) >= 0 ||
           (element.actors[1]).toLowerCase().indexOf(searchString) >= 0){
             results.push(element);
-            console.log("Pushed");
           }
       }
     }
