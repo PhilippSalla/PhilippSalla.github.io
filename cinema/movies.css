@@ -88,6 +88,7 @@ img{
   word-wrap: break-word;
   width: calc(100% - 5.625rem);
   padding: 0.75rem;
+  padding-left: 2rem;
   text-align: left;
   height: fit-content;
   max-height: 10rem;
@@ -95,6 +96,14 @@ img{
   margin: auto 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.movie-small-title h3{
+  color: var(--clr-accent);
+}
+
+.movie-small-title h6{
+  color: var(--clr-lighter);
 }
 
 .full{

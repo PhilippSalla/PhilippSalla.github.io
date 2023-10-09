@@ -25,8 +25,10 @@ function getCurrentMovie(){
           if (element.title === currentObject.title) {
             // title found
 
-            document.getElementById("nextMovieText").innerHTML = element.title + "<br>" + element.year + " - " + element.length + " min";
-            document.getElementById("nextMovieImage").src = element.imdbCoverId;
+            document.getElementById("nextMovieTitle").innerHTML = element.title;
+            document.getElementById("nextMovieDetails").innerHTML = element.year + " - " + element.length + " min";
+            document.getElementById("nextMovieActors").innerHTML = element.actors[0] + " & " + element.actors[1];
+            document.getElementById("nextMovieImage").src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
 
             setUpTimer(currentObject.dateTime);
           }
@@ -48,7 +50,6 @@ function getCurrentMovie(){
 function setUpTimer(movieDateTime){
 
   // var dateObj = new Date("Oct 4, 2023 17:00:00")
-  alert("AFTER FUNCITON " + movieDateTime);
   var dateObj =  new Date(movieDateTime);
   var countDownDate = dateObj.getTime();
 
@@ -126,6 +127,7 @@ function setUpTimer(movieDateTime){
 
     if (distance < -18013433) { // about 6 hours
       clearInterval(x);
+      document.getElementById("nextMovieImage").src = "";
       document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
       document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
       document.getElementById('movieTime').innerHTML = " - - : - - ";
