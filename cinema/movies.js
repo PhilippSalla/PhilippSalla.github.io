@@ -132,8 +132,15 @@ function setUpTimer(movieDateTime){
       document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
       document.getElementById('movieTime').innerHTML = " - - : - - ";
       document.getElementById('movieDay').innerHTML = "- ? -";
+      nextMovieDefault();
     }
   }, 1000);
+}
+
+function nextMovieDefault(){
+  document.getElementById("nextMovieTitle").innerHTML = "";
+  document.getElementById('nextMovieDetails').innerHTML = "Durchsuche die Liste nach einem Film deiner Wahl oder entscheide Vorort";
+  document.getElementById('nextMovieActors').innerHTML = "";
 }
 
 function searchMovie(searchString){
