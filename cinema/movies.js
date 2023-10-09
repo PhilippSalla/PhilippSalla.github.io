@@ -257,6 +257,7 @@ function buildScrollElement(targetElement, image, title){
   newMediaElement.classList.add("media-element");
 
   var newMediaImage = document.createElement("img");
+  newMediaImage.loading = "lazy";
   newMediaImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
   newMediaElement.appendChild(newMediaImage);
 
