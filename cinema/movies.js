@@ -226,6 +226,12 @@ fetch("data/movies.json").then(function(response){
     buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title)
   };
 
+  addBourneOnClick("diebourneidentität", "Die Boerne Identität");
+  addBourneOnClick("diebourneverschwörung", "Die Münster Verschwörung");
+  addBourneOnClick("dasbourneultimatum", "Das Thiel Ultimatum");
+  addBourneOnClick("dasbournevermächtnis", "Das Alberich Vermächtnis");
+  addBourneOnClick("jasonbourne", "Prof. Dr. Dr. Karl-Friedrich Boerne");
+
   // display pirates of the caribbean list
   for (const element of potcList) {
     buildScrollElement("potcScroll", element.imdbCoverId, element.title)
@@ -247,6 +253,7 @@ fetch("data/movies.json").then(function(response){
 
 function buildScrollElement(targetElement, image, title){
   var newMediaElement = document.createElement("div");
+  newMediaElement.id = title.replace(/\s+/g, '').toLowerCase();
   newMediaElement.classList.add("media-element");
 
   var newMediaImage = document.createElement("img");
@@ -262,4 +269,10 @@ function buildScrollElement(targetElement, image, title){
   newMediaElement.appendChild(newMediaDiv);
 
   document.getElementById(targetElement).appendChild(newMediaElement);
+}
+
+
+function addBourneOnClick(element, text){
+  var e = document.getElementById(element).children[1].children[0];
+  e.onclick = function () { e.innerText = text; e.classList.add("boerne"); };
 }

@@ -168,6 +168,10 @@ img{
   padding: 1rem;
 }
 
+.boerne{
+  animation: ani-boerne 3s backwards;
+}
+
 /*
   searchbar
 */
@@ -352,5 +356,14 @@ img{
   }
   100%{
     background-color: var(--clr-accent);
+  }
+}
+
+@keyframes ani-boerne {
+  0%{
+    color: red;
+  }
+  100%{
+    color: var(--clr-accent);
   }
 }
