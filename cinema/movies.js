@@ -24,10 +24,14 @@ function getCurrentMovie(){
 
           if (element.title === currentObject.title) {
             // title found
+            var d = "2D";
+            if (element.is3d){
+              d = "3D";
+            }
 
             document.getElementById("nextMovieTitle").innerHTML = element.title;
-            document.getElementById("nextMovieDetails").innerHTML = element.year + " - " + element.length + " min";
-            document.getElementById("nextMovieActors").innerHTML = element.actors[0] + " & " + element.actors[1];
+            document.getElementById("nextMovieDetails").innerHTML = element.year + " | " + element.length + " Minuten | " + d;
+            document.getElementById("nextMovieActors").innerHTML = "Mit: " + element.actors[0] + " & " + element.actors[1];
             document.getElementById("nextMovieImage").src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
 
             setUpTimer(currentObject.dateTime);
