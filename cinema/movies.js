@@ -183,7 +183,7 @@ function searchMovie(searchString){
     if(results.length >= 1){
       // display results
       for (const element of results) {
-        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title);
+        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId);
       };
       document.getElementById("searchResultsContainer").hidden = false;
     }else{
@@ -265,6 +265,7 @@ function buildScrollElement(targetElement, image, title, link){
   var newMediaLink = document.createElement("a");
   newMediaLink.href = imdbLinkPrefix + link;
   newMediaLink.target = "_blank";
+  console.log(title + newMediaLink.href);
   newMediaElement.appendChild(newMediaLink);
 
   var newMediaImage = document.createElement("img");
