@@ -1,6 +1,8 @@
 // keyList: has to be changed if new movie groups are added or removed !
 const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
 
+const imdbLinkPrefix = "https://www.imdb.com/title/"
+
 getCurrentMovie();
 
 function getCurrentMovie(){
@@ -222,12 +224,12 @@ fetch("data/movies.json").then(function(response){
 
   // display allmovies list
   for (const element of movieList) {
-    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title)
+    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId)
   };
 
   // display jason bourne list
   for (const element of jbList) {
-    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title)
+    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId)
   };
 
   addBourneOnClick("diebourneidentität", "Die Boerne Identität");
@@ -238,32 +240,38 @@ fetch("data/movies.json").then(function(response){
 
   // display pirates of the caribbean list
   for (const element of potcList) {
-    buildScrollElement("potcScroll", element.imdbCoverId, element.title)
+    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId)
   };
 
   // display harry potter list
   for (const element of hpList) {
-    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title)
+    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId)
   };
 
   // display star wars list
   for (const element of swList) {
-    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title)
+    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId)
   };
 
 }).catch(function(error){
   console.error(error);
 })
 
-function buildScrollElement(targetElement, image, title){
+function buildScrollElement(targetElement, image, title, link){
   var newMediaElement = document.createElement("div");
   newMediaElement.id = title.replace(/\s+/g, '').toLowerCase();
   newMediaElement.classList.add("media-element");
 
+  var newMediaLink = document.createElement("a");
+  newMediaLink.href = imdbLinkPrefix + link;
+  newMediaLink.target = "_blank";
+  newMediaElement.appendChild(newMediaLink);
+
   var newMediaImage = document.createElement("img");
   newMediaImage.loading = "lazy";
+  newMediaImage.title = "Auf IMDB anschauen ➡";
   newMediaImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
-  newMediaElement.appendChild(newMediaImage);
+  newMediaLink.appendChild(newMediaImage);
 
   var newMediaDiv = document.createElement("div");
   var newMediaP = document.createElement("p");

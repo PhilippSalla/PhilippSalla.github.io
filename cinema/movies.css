@@ -251,6 +251,7 @@ img{
   grid-template-rows: min-content;
   gap: 0.25rem;
   padding: 0.5rem;
+  color: var(--clr-accent);
   background-color: var(--clr-dark);
   border-radius: 0.25rem;
   box-shadow: 0.5rem 0.5rem rgb(32, 32, 32);
@@ -261,11 +262,13 @@ img{
 .media-element:focus-within{
   transform: scale(1.05);
   box-shadow: 1rem 1rem rgb(32, 32, 32);
-  outline: 0.2rem solid var(--clr-accent);
+  outline: 0.2rem solid var(--clr-bg);
+  background-color: var(--clr-lighter);
+  color: var(--clr-bg);
   transform: translate(-0.25rem, -0.25rem);
 }
 
-.media-element > img{
+.media-element img{
   aspect-ratio: 9/16;
   height: 16rem;
   object-fit: cover;
@@ -288,7 +291,6 @@ img{
   line-height: 1.15rem;
   margin: 0 auto;
   font-weight: 900;
-  color: var(--clr-accent);
 }
 
 .scroll-title-container{
