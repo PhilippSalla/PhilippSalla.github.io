@@ -169,8 +169,8 @@ img{
   padding: 1rem;
 }
 
-.boerne{
-  animation: ani-boerne 3s backwards;
+.flash-red{
+  animation: ani-flash-red 3s backwards;
 }
 
 /*
@@ -370,7 +370,7 @@ img{
   }
 }
 
-@keyframes ani-boerne {
+@keyframes ani-flash-red {
   0%{
     color: red;
   }

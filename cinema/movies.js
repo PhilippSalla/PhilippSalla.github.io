@@ -245,12 +245,6 @@ fetch("data/movies.json").then(function(response){
     buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
 
-  addBourneOnClick("diebourneidentität", "Die Boerne Identität");
-  addBourneOnClick("diebourneverschwörung", "Die Münster Verschwörung");
-  addBourneOnClick("dasbourneultimatum", "Das Thiel Ultimatum");
-  addBourneOnClick("dasbournevermächtnis", "Das Alberich Vermächtnis");
-  addBourneOnClick("jasonbourne", "Prof. Dr. Dr. Karl-Friedrich Boerne");
-
   // display pirates of the caribbean list
   for (const element of potcList) {
     buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
@@ -265,6 +259,8 @@ fetch("data/movies.json").then(function(response){
   for (const element of swList) {
     buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
+
+  easterEggs();
 
 }).catch(function(error){
   console.error(error);
@@ -306,7 +302,26 @@ function buildScrollElement(targetElement, image, title, link, isStack){
 }
 
 
-function addBourneOnClick(element, text){
+function addEasterEgg(element, text){
   var e = document.getElementById(element).children[1].children[0];
-  e.onclick = function () { e.innerText = text; e.classList.add("boerne"); };
+  e.onclick = function () { e.innerText = text; e.classList.add("flash-red");};
+}
+
+function easterEggs(){
+  addEasterEgg("diebourneidentität", "Die Boerne Identität");
+  addEasterEgg("diebourneverschwörung", "Die Münster Verschwörung");
+  addEasterEgg("dasbourneultimatum", "Das Thiel Ultimatum");
+  addEasterEgg("dasbournevermächtnis", "Das Alberich Vermächtnis");
+  addEasterEgg("jasonbourne", "Prof. Dr. Dr. Karl-Friedrich Boerne");
+
+
+  addEasterEgg("2012dasendederwelt", "DIE MAYAS HATTEN RECHT! Oh ne doch noch nicht");
+  addEasterEgg("johnwick", "Mit einem verschissenen Bleistift!");
+  addEasterEgg("jurassicpark", "Ich habe keine Kosten gescheut!");
+  addEasterEgg("daswundervonmanhattan", "DER WEIHNACHTS\nMANN!");
+  addEasterEgg("nachtsimmuseum", "Dumm Dumm, gibst du mir Gum Gum?");
+  addEasterEgg("startrek", "Wo noch nie ein Mensch zuvor gewesen ist");
+  addEasterEgg("thegreatwall", "We need to build a wall!");
+  addEasterEgg("xxx-triplex", "Ich steh auf so'n Scheiß!");
+  addEasterEgg("starwars:episodeiii-dierachedersith", "I have the high ground!");
 }
