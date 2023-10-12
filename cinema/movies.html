@@ -24,7 +24,7 @@
         <!-- Next Movie Details -->
         <div class="half">
           <div class="container movie-card-small">
-            <img id="nextMovieImage" src="___LINK_TO_AMAZON_MOVIES_DB___" alt="movie image" onerror="document.getElementById('nextMovieImage').src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png'; nextMovieDefault();">
+            <img id="nextMovieImage" src="https://cdn-icons-png.flaticon.com/512/2476/2476231.png" alt="movie image" onerror="document.getElementById('nextMovieImage').src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png'; nextMovieDefault();">
           </div>
           
           <div class="movie-small-title">
@@ -178,21 +178,6 @@
         addListener("starWarsScroll");
 
       })();
-    </script>
-
-    <!-- Scroll to section -->
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <script>
-      let $root = $('html, body');
-      $('a[href^="#"]').click(function () {
-        let href = $.attr(this, 'href');
-        $root.animate({
-          scrollTop: $(href).offset().top
-        }, 500, function () {
-          window.location.hash = href;
-        });
-        return false;
-      });
     </script>
   </body>
 </html>

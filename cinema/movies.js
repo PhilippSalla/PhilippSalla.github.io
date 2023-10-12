@@ -1,7 +1,7 @@
 // keyList: has to be changed if new movie groups are added or removed !
 const keyList = ["allMovies", "jasonBourne", "piratesOfTheCaribbean", "harryPotter", "starWars"];
 
-const imdbLinkPrefix = "https://www.imdb.com/title/"
+const imdbLinkPrefix = "https://www.imdb.com/title/";
 
 getCurrentMovie();
 
@@ -19,6 +19,7 @@ function getCurrentMovie(){
     }).then(function(object){
       // Success condition for all movies file
 
+      var found = false;
       // get each list
       for (const key of keyList) {
         // iterate all lists and iterate each list for search string
@@ -36,12 +37,17 @@ function getCurrentMovie(){
             document.getElementById("nextMovieActors").innerHTML = "Mit: " + element.actors[0] + " & " + element.actors[1];
             document.getElementById("nextMovieImage").src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
 
-            setUpTimer(currentObject.dateTime);
+            found = true;
+            break;
           }
         }
       }
 
       // title not found
+      if (!found){
+        nextMovieDefault();
+      }
+      setUpTimer(currentObject.dateTime);
 
     }).catch(function(error){
       // Error condition for all movies, abort process
@@ -54,6 +60,8 @@ function getCurrentMovie(){
 }
 
 function setUpTimer(movieDateTime){
+
+  nextTimeDefault();
 
   // var dateObj = new Date("Oct 4, 2023 17:00:00")
   var dateObj =  new Date(movieDateTime);
@@ -134,11 +142,8 @@ function setUpTimer(movieDateTime){
     if (distance < -18013433) { // about 6 hours
       clearInterval(x);
       document.getElementById("nextMovieImage").src = "";
-      document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
-      document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
-      document.getElementById('movieTime').innerHTML = " - - : - - ";
-      document.getElementById('movieDay').innerHTML = "- ? -";
       nextMovieDefault();
+      nextTimeDefault();
     }
   }, 1000);
 }
@@ -147,6 +152,14 @@ function nextMovieDefault(){
   document.getElementById("nextMovieTitle").innerHTML = "";
   document.getElementById('nextMovieDetails').innerHTML = "Durchsuche die Liste nach einem Film deiner Wahl oder entscheide Vorort";
   document.getElementById('nextMovieActors').innerHTML = "";
+  document.getElementById('nextMovieImage').src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png';
+}
+
+function nextTimeDefault(){
+  document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
+  document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
+  document.getElementById('movieTime').innerHTML = " - - : - - ";
+  document.getElementById('movieDay').innerHTML = "- ? -";
 }
 
 function searchMovie(searchString){
