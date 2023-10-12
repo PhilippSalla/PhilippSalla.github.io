@@ -243,8 +243,8 @@ img{
   padding: 2rem;
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
-  /* scroll-behavior: smooth; */
-  -webkit-mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000)
+  mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
+  -webkit-mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
 }
 
 .media-element{
