@@ -112,7 +112,7 @@
         <!-- to be filled by script -->
       </div>
 
-      <div class="scroll-title-container">
+      <div id="jasonBourne" class="scroll-title-container">
         <h2>Jason Bourne</h2>
         <hr>
       </div>
@@ -121,7 +121,7 @@
         <!-- to be filled by script -->
       </div>
 
-      <div class="scroll-title-container">
+      <div id="potc" class="scroll-title-container">
         <h2>Fluch der Karibik</h2>
         <hr>
       </div>
@@ -130,7 +130,7 @@
         <!-- to be filled by script -->
       </div>
 
-      <div class="scroll-title-container">
+      <div id = "harryPotter" class="scroll-title-container">
         <h2>Harry Potter</h2>
         <hr>
       </div>
@@ -139,7 +139,7 @@
         <!-- to be filled by script -->
       </div>
 
-      <div class="scroll-title-container">
+      <div id="starWars" class="scroll-title-container">
         <h2>Star Wars</h2>
         <hr>
       </div>
@@ -178,6 +178,21 @@
         addListener("starWarsScroll");
 
       })();
+    </script>
+
+    <!-- Scroll to section -->
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+      let $root = $('html, body');
+      $('a[href^="#"]').click(function () {
+        let href = $.attr(this, 'href');
+        $root.animate({
+          scrollTop: $(href).offset().top
+        }, 500, function () {
+          window.location.hash = href;
+        });
+        return false;
+      });
     </script>
   </body>
 </html>

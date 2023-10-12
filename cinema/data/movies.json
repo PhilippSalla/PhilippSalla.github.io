@@ -54,10 +54,10 @@
     },
     {
       "title": "Jason Bourne (1-5)",
-      "imdbLinkId": "tt0258463",
+      "imdbLinkId": "#jasonBourne",
       "imdbCoverId": "MV5BMjA0MDcyODM3MF5BMl5BanBnXkFtZTYwNzUxNDk5._V1_FMjpg_UX334_",
       "is3d": false,
-      "isStack": false,
+      "isStack": true,
       "year": 2002,
       "length": 600,
       "actors": [
@@ -197,10 +197,10 @@
     },
     {
       "title": "Fluch der Karibik (1-5) ",
-      "imdbLinkId": "tt0325980",
+      "imdbLinkId": "#potc",
       "imdbCoverId": "MV5BMTIzODgzNDM5M15BMl5BanBnXkFtZTcwMjU3NDAwMQ@@._V1_FMjpg_UX338_",
       "is3d": false,
-      "isStack": false,
+      "isStack": true,
       "year": 2003,
       "length": 729,
       "actors": [
@@ -249,10 +249,10 @@
     },
     {
       "title": "Harry Potter (1-7)",
-      "imdbLinkId": "tt0241527",
+      "imdbLinkId": "#harryPotter",
       "imdbCoverId": "MV5BY2I4NWE2OTAtMzZhNC00MjgzLTg2ZDEtMTllYWI5MDdiMWE0XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX611_",
       "is3d": false,
-      "isStack": false,
+      "isStack": true,
       "year": 2001,
       "length": 1037,
       "actors": [
@@ -938,7 +938,7 @@
     },
     {
       "title": "Star Wars: Episodes I-IX & Solo & RogeOne",
-      "imdbLinkId": "tt0120915",
+      "imdbLinkId": "#starWars",
       "imdbCoverId": "MV5BN2E1OTNjYzUtODM1OC00MmEwLWIzYjQtNjk5NzE0NDY5Y2M5XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UX500_",
       "is3d": false,
       "isStack": true,

@@ -183,7 +183,7 @@ function searchMovie(searchString){
     if(results.length >= 1){
       // display results
       for (const element of results) {
-        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId);
+        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack);
       };
       document.getElementById("searchResultsContainer").hidden = false;
     }else{
@@ -224,12 +224,12 @@ fetch("data/movies.json").then(function(response){
 
   // display allmovies list
   for (const element of movieList) {
-    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId)
+    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
 
   // display jason bourne list
   for (const element of jbList) {
-    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId)
+    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
 
   addBourneOnClick("diebourneidentität", "Die Boerne Identität");
@@ -240,37 +240,44 @@ fetch("data/movies.json").then(function(response){
 
   // display pirates of the caribbean list
   for (const element of potcList) {
-    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId)
+    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
 
   // display harry potter list
   for (const element of hpList) {
-    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId)
+    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
 
   // display star wars list
   for (const element of swList) {
-    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId)
+    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
   };
 
 }).catch(function(error){
   console.error(error);
 })
 
-function buildScrollElement(targetElement, image, title, link){
+function buildScrollElement(targetElement, image, title, link, isStack){
   var newMediaElement = document.createElement("div");
   newMediaElement.id = title.replace(/\s+/g, '').toLowerCase();
   newMediaElement.classList.add("media-element");
 
   var newMediaLink = document.createElement("a");
-  newMediaLink.href = imdbLinkPrefix + link;
-  newMediaLink.target = "_blank";
-  console.log(title + newMediaLink.href);
+  if(!isStack){
+    newMediaLink.href = imdbLinkPrefix + link;
+    newMediaLink.target = "_blank";
+  }else{
+    newMediaLink.href = link;
+  }
   newMediaElement.appendChild(newMediaLink);
 
   var newMediaImage = document.createElement("img");
   newMediaImage.loading = "lazy";
-  newMediaImage.title = "Auf IMDB anschauen ➡";
+  if(!isStack){
+    newMediaImage.title = "Auf IMDB anschauen ➡"
+  }else{
+    newMediaImage.title = "Zur Einzelauswahl ➡";
+  }
   newMediaImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
   newMediaLink.appendChild(newMediaImage);
 
