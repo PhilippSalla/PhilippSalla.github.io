@@ -315,6 +315,10 @@ img{
   cursor: help;
 }
 
+.opacity-fade{
+  animation: ani-opacity-fade 5s backwards;
+}
+
 /*
   responsive
 */
@@ -379,5 +383,14 @@ img{
   }
   100%{
     color: var(--clr-accent);
+  }
+}
+
+@keyframes ani-opacity-fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

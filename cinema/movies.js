@@ -152,7 +152,12 @@ function nextMovieDefault(){
   document.getElementById("nextMovieTitle").innerHTML = "";
   document.getElementById('nextMovieDetails').innerHTML = "Durchsuche die Liste nach einem Film deiner Wahl oder entscheide Vorort";
   document.getElementById('nextMovieActors').innerHTML = "";
-  document.getElementById('nextMovieImage').src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png';
+  var e = document.getElementById("nextMovieImage");
+  e.src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png';
+  e.onclick = function () {
+    e.classList.add("opacity-fade");
+    e.src = "https://i.giphy.com/media/oa4Au5xDZ6HJYF6KGH/giphy.webp";
+  };
 }
 
 function nextTimeDefault(){
