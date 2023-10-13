@@ -304,7 +304,12 @@ function buildScrollElement(targetElement, image, title, link, isStack){
 
 function addEasterEgg(element, text){
   var e = document.getElementById(element).children[1].children[0];
-  e.onclick = function () { e.innerText = text; e.classList.add("flash-red");};
+  e.classList.add("hint");
+  e.onclick = function () { 
+    e.innerText = text; 
+    e.classList.add("flash-red");
+    e.classList.remove("hint");
+  };
 }
 
 function easterEggs(){
