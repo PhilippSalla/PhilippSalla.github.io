@@ -126,11 +126,8 @@ img{
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
   height: min-content;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: monospace;
   font-weight: 900;
-  border-radius: 0.25rem;
-  border-left: 0.1rem solid var(--clr-light);
-  border-right: 0.1rem solid var(--clr-light);
 }
 
 .right-details-container{
