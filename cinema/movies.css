@@ -260,7 +260,7 @@ img{
   padding: 0.5rem;
   color: var(--clr-accent);
   background-color: var(--clr-dark);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem rgb(32, 32, 32);
   transition: 250ms ease-in-out;
 }
