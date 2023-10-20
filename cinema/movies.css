@@ -80,11 +80,12 @@ img{
   outline: 0.05rem solid var(--clr-light);
 }
 
-.movie-card-small > img{
+.movie-card-small img{
   aspect-ratio: 9/16;
   height: 10rem;
-  object-fit: scale-down;
+  object-fit: cover;
   background-color: var(--clr-dark);
+  padding: 0;
 }
 
 .movie-small-title{
