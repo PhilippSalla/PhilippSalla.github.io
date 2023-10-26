@@ -242,27 +242,27 @@ fetch("data/movies.json").then(function(response){
 
   // display allmovies list
   for (const element of movieList) {
-    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
+    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year);
   };
 
   // display jason bourne list
   for (const element of jbList) {
-    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
+    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
   };
 
   // display pirates of the caribbean list
   for (const element of potcList) {
-    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
+    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
   };
 
   // display harry potter list
   for (const element of hpList) {
-    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
+    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
   };
 
   // display star wars list
   for (const element of swList) {
-    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack)
+    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
   };
 
   easterEggs();
@@ -271,44 +271,95 @@ fetch("data/movies.json").then(function(response){
   console.error(error);
 })
 
-function buildScrollElement(targetElement, image, title, link, isStack){
-  var newMediaElement = document.createElement("div");
-  newMediaElement.id = title.replace(/\s+/g, '').toLowerCase();
-  newMediaElement.classList.add("media-element");
+function buildScrollElement(targetElement, image, title, link, isStack, is3d, duration, actor1, actor2, year){
+  var mainMediaElement = document.createElement("div");
+  mainMediaElement.id = title.replace(/\s+/g, '').toLowerCase();
+  mainMediaElement.classList.add("media-element");
 
-  var newMediaLink = document.createElement("a");
-  if(!isStack){
-    newMediaLink.href = imdbLinkPrefix + link;
-    newMediaLink.target = "_blank";
+  var cardTopElement = document.createElement("div");
+  mainMediaElement.appendChild(cardTopElement);
+
+  var cardLeft = document.createElement("div");
+  cardLeft.classList.add("card-half");
+  cardTopElement.appendChild(cardLeft);
+
+  var cardLink = document.createElement("a");
+  if(isStack){
+    cardLink.href = link;
   }else{
-    newMediaLink.href = link;
+    cardLink.href = imdbLinkPrefix + link;
+    cardLink.target = "_blank";
   }
-  newMediaElement.appendChild(newMediaLink);
+  cardLeft.appendChild(cardLink);
 
-  var newMediaImage = document.createElement("img");
-  newMediaImage.loading = "lazy";
-  if(!isStack){
-    newMediaImage.title = "Auf IMDB anschauen ➡"
+  var cardImage = document.createElement("img");
+  cardImage.loading = "lazy";
+  cardImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
+  if(isStack){
+    cardImage.title = "Zur Einzelauswahl ➡";
   }else{
-    newMediaImage.title = "Zur Einzelauswahl ➡";
+    cardImage.title = "Auf IMDB anschauen ➡";
   }
-  newMediaImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
-  newMediaLink.appendChild(newMediaImage);
+  cardLink.appendChild(cardImage);
 
-  var newMediaDiv = document.createElement("div");
-  var newMediaP = document.createElement("p");
-  newMediaP.classList.add("media-scroll-title");
-  newMediaP.innerText = title;
-  newMediaDiv.appendChild(newMediaP);
 
-  newMediaElement.appendChild(newMediaDiv);
 
-  document.getElementById(targetElement).appendChild(newMediaElement);
+  var cardRight = document.createElement("div");
+  cardRight.classList.add("card-half");
+  cardTopElement.appendChild(cardRight);
+
+  var cardYear = document.createElement("div");
+  cardYear.classList.add("card-details", "card-year");
+  cardYear.innerHTML = "(" + year + ")";
+  cardRight.appendChild(cardYear);
+
+  var cardDimension = document.createElement("div");
+  cardDimension.classList.add("card-details", "card-dimension");
+  if(is3d){
+    cardDimension.innerHTML = "3D";
+  }else{
+    cardDimension.innerHTML = "2D";
+  }
+  cardRight.appendChild(cardDimension);
+
+  var cardDuration = document.createElement("div");
+  cardDuration.classList.add("card-details", "card-duration");
+  cardDuration.innerHTML = duration + " Minutes";
+  cardRight.appendChild(cardDuration);
+
+  var cardSeparator = document.createElement("div");
+  cardSeparator.classList.add("card-details-separator");
+  cardRight.appendChild(cardSeparator);
+
+  cardSeparator.appendChild(document.createElement("hr"));
+
+  var cardActor1 = document.createElement("div");
+  cardActor1.classList.add("card-details");
+  cardActor1.innerHTML = actor1;
+  cardRight.appendChild(cardActor1);
+
+  var cardActor2 = document.createElement("div");
+  cardActor2.classList.add("card-details");
+  cardActor2.innerHTML = actor2;
+  cardRight.appendChild(cardActor2);
+
+
+
+  var cardTitle = document.createElement("div");
+  cardTitle.classList.add("card-title");
+  mainMediaElement.appendChild(cardTitle);
+
+  var cardTitleText = document.createElement("p");
+  cardTitleText.innerText = title;
+  cardTitleText.id = title.replace(/\s+/g, '').toLowerCase() + "_title";
+  cardTitle.appendChild(cardTitleText);
+
+  document.getElementById(targetElement).appendChild(mainMediaElement);
 }
 
 
 function addEasterEgg(element, text){
-  var e = document.getElementById(element).children[1].children[0];
+  var e = document.getElementById(element);
   e.classList.add("hint");
   e.onclick = function () { 
     e.innerText = text; 
@@ -318,20 +369,20 @@ function addEasterEgg(element, text){
 }
 
 function easterEggs(){
-  addEasterEgg("diebourneidentität", "Die Boerne Identität");
-  addEasterEgg("diebourneverschwörung", "Die Münster Verschwörung");
-  addEasterEgg("dasbourneultimatum", "Das Thiel Ultimatum");
-  addEasterEgg("dasbournevermächtnis", "Das Alberich Vermächtnis");
-  addEasterEgg("jasonbourne", "Prof. Dr. Dr. Karl-Friedrich Boerne");
+  addEasterEgg("diebourneidentität_title", "Die Boerne Identität");
+  addEasterEgg("diebourneverschwörung_title", "Die Münster Verschwörung");
+  addEasterEgg("dasbourneultimatum_title", "Das Thiel Ultimatum");
+  addEasterEgg("dasbournevermächtnis_title", "Das Alberich Vermächtnis");
+  addEasterEgg("jasonbourne_title", "Prof. Dr. Dr. Karl-Friedrich Boerne");
 
 
-  addEasterEgg("2012dasendederwelt", "DIE MAYAS HATTEN RECHT! Oh ne doch noch nicht");
-  addEasterEgg("johnwick", "Mit einem verschissenen Bleistift!");
-  addEasterEgg("jurassicpark", "Ich habe keine Kosten gescheut!");
-  addEasterEgg("daswundervonmanhattan", "DER WEIHNACHTS\nMANN!");
-  addEasterEgg("nachtsimmuseum", "Dumm Dumm, gibst du mir Gum Gum?");
-  addEasterEgg("startrek", "Wo noch nie ein Mensch zuvor gewesen ist");
-  addEasterEgg("thegreatwall", "We need to build a wall!");
-  addEasterEgg("xxx-triplex", "Ich steh auf so'n Scheiß!");
-  addEasterEgg("starwars:episodeiii-dierachedersith", "I have the high ground!");
+  addEasterEgg("2012dasendederwelt_title", "DIE MAYAS HATTEN RECHT! Oh ne doch noch nicht");
+  addEasterEgg("johnwick_title", "Mit einem verschissenen Bleistift!");
+  addEasterEgg("jurassicpark_title", "Ich habe keine Kosten gescheut!");
+  addEasterEgg("daswundervonmanhattan_title", "DER WEIHNACHTS\nMANN!");
+  addEasterEgg("nachtsimmuseum_title", "Dumm Dumm, gibst du mir Gum Gum?");
+  addEasterEgg("startrek_title", "Wo noch nie ein Mensch zuvor gewesen ist");
+  addEasterEgg("thegreatwall_title", "We need to build a wall!");
+  addEasterEgg("xxx-triplex_title", "Ich steh auf so'n Scheiß!");
+  addEasterEgg("starwars:episodeiii-dierachedersith_title", "I have the high ground!");
 }
