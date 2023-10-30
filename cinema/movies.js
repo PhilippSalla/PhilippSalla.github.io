@@ -201,7 +201,7 @@ function searchMovie(searchString){
     if(results.length >= 1){
       // display results
       for (const element of results) {
-        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack);
+        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year);
       };
       document.getElementById("searchResultsContainer").hidden = false;
     }else{
