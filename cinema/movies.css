@@ -6,6 +6,7 @@
   --clr-lighter: #b3b3b3;
   --clr-white: #ffffff;
   --clr-accent: #00bbff;
+  --clr-accent2: #ffa500;
 }
 
 *{
@@ -311,9 +312,16 @@ img{
 
 .card-dimension {
   font-weight: 900;
-  color: var(--clr-accent);
-  text-shadow: 0.1rem 0.1rem 0.1rem var(--clr-dark);
+  text-shadow: 0.15rem 0.15rem 0.15rem var(--clr-dark);
   font-size: 1.25rem;
+}
+
+.txt-blue{
+  color: var(--clr-accent);
+}
+
+.txt-orange{
+  color: var(--clr-accent2);
 }
 
 .card-details-separator {

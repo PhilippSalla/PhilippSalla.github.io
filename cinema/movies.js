@@ -316,9 +316,9 @@ function buildScrollElement(targetElement, image, title, link, isStack, is3d, du
   var cardDimension = document.createElement("div");
   cardDimension.classList.add("card-details", "card-dimension");
   if(is3d){
-    cardDimension.innerHTML = "3D";
+    cardDimension.innerHTML = '<b class="txt-blue">2D</b> | <b class="txt-orange">3D</b>';
   }else{
-    cardDimension.innerHTML = "2D";
+    cardDimension.innerHTML = '<b class="txt-blue">2D</b>';
   }
   cardRight.appendChild(cardDimension);
 
