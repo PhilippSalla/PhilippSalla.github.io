@@ -324,7 +324,7 @@ function buildScrollElement(targetElement, image, title, link, isStack, is3d, du
 
   var cardDuration = document.createElement("div");
   cardDuration.classList.add("card-details", "card-duration");
-  cardDuration.innerHTML = duration + " Minutes";
+  cardDuration.innerHTML = duration + " Minuten";
   cardRight.appendChild(cardDuration);
 
   var cardSeparator = document.createElement("div");
