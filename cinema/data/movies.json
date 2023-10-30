@@ -108,7 +108,7 @@
       "title": "Der Marsianer: Rettet Mark Watney",
       "imdbLinkId": "tt3659388",
       "imdbCoverId": "MV5BYjFjNTU4MmUtZDg3OS00M2I3LWIyOWUtMTE3OWE0ZTFiZmQzXkEyXkFqcGdeQXVyMjI0MDI5Mg@@._V1_QL75_UY562_CR9,0,380,562_",
-      "is3d": false,
+      "is3d": true,
       "isStack": false,
       "year": 2015,
       "length": 144,
@@ -355,7 +355,7 @@
       "title": "Ich - Einfach unverbesserlich 3",
       "imdbLinkId": "tt3469046",
       "imdbCoverId": "MV5BZWZjNmY1YmUtODE0My00ZTkzLWFjNDYtNTFiODQwYjg4MTE1XkEyXkFqcGdeQXVyNjY0Mzk3NzA@._V1_FMjpg_UY3000_",
-      "is3d": false,
+      "is3d": true,
       "isStack": false,
       "year": 2017,
       "length": 89,
@@ -414,6 +414,19 @@
       "actors": [
         "Matthew MacConaughey",
         "Anne Hathaway"
+      ]
+    },
+    {
+      "title": "James Bond 007 jagt Dr. No",
+      "imdbLinkId": "tt0055928",
+      "imdbCoverId": "MV5BZTk1YjU1ZTQtNjczYy00MTdjLTliOTMtMDFhMGExM2ZkY2M3XkEyXkFqcGdeQXVyNjkwOTQ4MDE@._V1_FMjpg_UY2372_",
+      "is3d": false,
+      "isStack": false,
+      "year": 1962,
+      "length": 110,
+      "actors": [
+        "Sean Connery",
+        "Ursula Andress"
       ]
     },
     {
@@ -1031,7 +1044,7 @@
       "title": "The Great Wall",
       "imdbLinkId": "tt2034800",
       "imdbCoverId": "MV5BMjUyODVkZjctZWUyMC00NWQ1LWEzZDctMGM3ZmExYjU3NDgyXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_QL75_UY562_CR9,0,380,562_",
-      "is3d": false,
+      "is3d": true,
       "isStack": false,
       "year": 2016,
       "length": 103,
