@@ -38,7 +38,7 @@ function getCurrentMovie(){
             document.getElementById("nextMovieImage").src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
 
             found = true;
-            if(element.isOpen){
+            if(currentObject.isOpen){
               document.getElementById("openStatus").style.display = "none";
             }
             break;
