@@ -94,9 +94,9 @@ function setUpTimer(movieDateTime){
       dateCode = "Samstag";
       break;
   }
-  if(dateCode != ""){
-    dateCode += ", " + dateObj.getDay() + "." + dateObj.getMonth() + ".";
-  }
+  // if(dateCode != ""){
+  //   dateCode += ", " + dateObj.getDay() + "." + dateObj.getMonth() + ".";
+  // }
   document.getElementById('movieDay').innerHTML = dateCode;
 
   var targetHours = dateObj.getHours();
