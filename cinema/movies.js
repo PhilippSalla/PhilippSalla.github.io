@@ -5,6 +5,18 @@ const imdbLinkPrefix = "https://www.imdb.com/title/";
 
 getCurrentMovie();
 
+document.getElementById("hostDisplay").style.visibility = "hidden";
+fetch("data/current.json").then(function (response) {
+  return response.json();
+}).then(function (currentObject) {
+  if(currentObject.host != ""){
+    document.getElementById("hostId").innerHTML = "[" + currentObject.host + "]";
+    document.getElementById("hostDisplay").style.visibility = "visible";
+  }
+}).catch(function (error) {
+  console.error(error);
+})
+
 function getCurrentMovie(){
   // fetch current movie data
   fetch("data/current.json").then(function(response){
@@ -38,9 +50,6 @@ function getCurrentMovie(){
             document.getElementById("nextMovieImage").src = "https://m.media-amazon.com/images/M/" + element.imdbCoverId + ".jpg";
 
             found = true;
-            if(currentObject.isOpen){
-              document.getElementById("openStatus").style.display = "none";
-            }
             break;
           }
         }
@@ -94,6 +103,7 @@ function setUpTimer(movieDateTime){
       dateCode = "Samstag";
       break;
   }
+  // TODO: FIXME:
   // if(dateCode != ""){
   //   dateCode += ", " + dateObj.getDay() + "." + dateObj.getMonth() + ".";
   // }
@@ -155,7 +165,6 @@ function setUpTimer(movieDateTime){
 }
 
 function nextMovieDefault(){
-  document.getElementById("openStatus").style.display = "none";
   document.getElementById("nextMovieTitle").innerHTML = "";
   document.getElementById('nextMovieDetails').innerHTML = "Durchsuche die Liste nach einem Film deiner Wahl oder entscheide Vorort";
   document.getElementById('nextMovieActors').innerHTML = "";

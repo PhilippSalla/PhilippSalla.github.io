@@ -71,18 +71,18 @@ img{
   margin-left: auto;
   margin-top: auto;
   margin-bottom: 0;
-  color: red;
-  font-size: 0.5rem;
+  color: var(--clr-white);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
   text-align: center;
-  border-radius: 0.25rem;
-  outline: 0.1rem solid red;
   padding-right: 0.2rem;
 }
 
-.top-title img{
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.5rem;
+#hostId{
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding-left: 0.5rem;
+  color: var(--clr-accent2);
 }
 
 .top-details-container{
