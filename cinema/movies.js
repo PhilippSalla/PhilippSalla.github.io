@@ -104,9 +104,9 @@ function setUpTimer(movieDateTime){
       break;
   }
   // TODO: FIXME:
-  // if(dateCode != ""){
-  //   dateCode += ", " + dateObj.getDay() + "." + dateObj.getMonth() + ".";
-  // }
+  if(dateCode != ""){
+    dateCode += " ,  " + dateObj.getDate() + ". " + (dateObj.getMonth() + 1) + ".";
+  }
   document.getElementById('movieDay').innerHTML = dateCode;
 
   var targetHours = dateObj.getHours();
