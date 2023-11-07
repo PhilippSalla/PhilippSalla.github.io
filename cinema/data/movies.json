@@ -244,7 +244,7 @@
       "imdbCoverId": "MV5BMTk3MjMyNDUyOF5BMl5BanBnXkFtZTgwNDQ4OTA2MTI@._V1_FMjpg_UX1028_",
       "is3d": false,
       "isStack": false,
-      "isNew": false,
+      "isNew": true,
       "year": 2017,
       "length": 107,
       "actors": [
@@ -258,7 +258,7 @@
       "imdbCoverId": "MV5BM2RmMGY2Y2UtNjA1NS00NGE4LThiNzItMmE1NTk5NzI5NmE0XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UY5000_",
       "is3d": false,
       "isStack": false,
-      "isNew": false,
+      "isNew": true,
       "year": 2021,
       "length": 105,
       "actors": [
@@ -510,7 +510,7 @@
       "imdbCoverId": "MV5BMTE4NmVmNTctMjNlZi00ODQwLTgxYmYtOGZhNzFlOTA0ODRiXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX1132_",
       "is3d": false,
       "isStack": false,
-      "isNew": false,
+      "isNew": true,
       "year": 2019,
       "length": 130,
       "actors": [
@@ -524,7 +524,7 @@
       "imdbCoverId": "MV5BYzI2YWIxN2EtMjI3Ny00YTZmLTg1NTEtYjA3NjA3YzZkM2M3XkEyXkFqcGdeQXVyMTU2MjY2Mjk3._V1_FMjpg_UX240_",
       "is3d": false,
       "isStack": false,
-      "isNew": false,
+      "isNew": true,
       "year": 2023,
       "length": 169,
       "actors": [
@@ -1224,7 +1224,7 @@
       "imdbCoverId": "MV5BYTJmNmJmMjUtYzdiNS00NDNkLWE4MjMtZTdmZjIxYjQxZjZmXkEyXkFqcGdeQXVyMzExODEzNDA@._V1_FMjpg_UX989_",
       "is3d": false,
       "isStack": false,
-      "isNew": false,
+      "isNew": true,
       "year": 2010,
       "length": 98,
       "actors": [
