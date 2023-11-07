@@ -258,20 +258,17 @@ fetch("data/movies.json").then(function(response){
   swList = object.starWars;
 
   // display allmovies list
-  var tempElement = document.createElement("div");
-  tempElement.id = "tempElementId";
-  document.getElementById("allMoviesScroll").appendChild(tempElement);
   for (const element of movieList) {
     if(element.isNew){
+      console.log(element.title + " -> THE LIST");
       buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
-    }else{
-      buildScrollElement("tempElementId", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
+    }
+  }
+  for (const element of movieList){
+    if(!element.isNew){
+      buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
     }
   };
-  for(const element of tempElement.childNodes){
-    document.getElementById("allMoviesScroll").appendChild(element);
-  }
-  tempElement.remove();
 
   // display jason bourne list
   for (const element of jbList) {

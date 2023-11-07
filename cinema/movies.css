@@ -499,3 +499,7 @@ img{
     opacity: 0.5;
   }
 }
+
+#tempElementId{
+  outline: 2px solid red;
+}
