@@ -218,7 +218,7 @@ function searchMovie(searchString){
     if(results.length >= 1){
       // display results
       for (const element of results) {
-        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year);
+        buildScrollElement("searchResultScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
       };
       document.getElementById("searchResultsContainer").hidden = false;
     }else{
@@ -259,27 +259,27 @@ fetch("data/movies.json").then(function(response){
 
   // display allmovies list
   for (const element of movieList) {
-    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year);
+    buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
   };
 
   // display jason bourne list
   for (const element of jbList) {
-    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
+    buildScrollElement("jasonBourneScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew)
   };
 
   // display pirates of the caribbean list
   for (const element of potcList) {
-    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
+    buildScrollElement("potcScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew)
   };
 
   // display harry potter list
   for (const element of hpList) {
-    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
+    buildScrollElement("harryPotterScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew)
   };
 
   // display star wars list
   for (const element of swList) {
-    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year)
+    buildScrollElement("starWarsScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew)
   };
 
   easterEggs();
@@ -288,7 +288,7 @@ fetch("data/movies.json").then(function(response){
   console.error(error);
 })
 
-function buildScrollElement(targetElement, image, title, link, isStack, is3d, duration, actor1, actor2, year){
+function buildScrollElement(targetElement, image, title, link, isStack, is3d, duration, actor1, actor2, year, isNew){
   var mainMediaElement = document.createElement("div");
   mainMediaElement.id = title.replace(/\s+/g, '').toLowerCase();
   mainMediaElement.classList.add("media-element");
@@ -309,6 +309,10 @@ function buildScrollElement(targetElement, image, title, link, isStack, is3d, du
   }
   cardLeft.appendChild(cardLink);
 
+  var cardImageContainer = document.createElement("div");
+  cardImageContainer.classList.add("card-image-container");
+  cardLink.appendChild(cardImageContainer);
+
   var cardImage = document.createElement("img");
   cardImage.loading = "lazy";
   cardImage.src = "https://m.media-amazon.com/images/M/" + image + ".jpg";
@@ -317,7 +321,15 @@ function buildScrollElement(targetElement, image, title, link, isStack, is3d, du
   }else{
     cardImage.title = "Auf IMDB anschauen ➡";
   }
-  cardLink.appendChild(cardImage);
+  cardImageContainer.appendChild(cardImage);
+
+  if(isNew){
+    var newIndicator = document.createElement("div");
+    newIndicator.classList.add("new-wrapper");
+    newIndicator.innerHTML = "NEU";
+    newIndicator.title = "Kürzlich hinzugefügt!";
+    cardImageContainer.appendChild(newIndicator);
+  }
 
 
 

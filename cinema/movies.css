@@ -303,6 +303,7 @@ img{
   outline: 0.05rem solid var(--clr-bg);
   background-color: var(--clr-lighter);
   color: var(--clr-bg);
+  z-index: 100;
   transform: translate(-0.25rem, -0.25rem);
 }
 
@@ -324,6 +325,26 @@ img{
 .card-half {
   width: 10rem;
   height: fit-content;
+}
+
+.card-image-container {
+  text-align: center;
+  position: relative;
+}
+
+.new-wrapper {
+  position: absolute;
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 1.75rem;
+  color: var(--clr-accent2);
+  top: 0.25rem;
+  left: 0.25rem;
+  text-shadow: 0.15rem 0.15rem 0.15rem var(--clr-dark);
+  backdrop-filter: blur(10px) saturate(90%);
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+  animation: ani-fade 4s ease-in-out infinite;
 }
 
 .card-details {
@@ -464,5 +485,17 @@ img{
   }
   100%{
     opacity: 1;
+  }
+}
+
+@keyframes ani-fade{
+  0%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.5;
   }
 }
