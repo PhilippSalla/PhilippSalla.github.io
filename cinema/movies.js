@@ -257,16 +257,20 @@ fetch("data/movies.json").then(function(response){
   hpList = object.harryPotter;
   swList = object.starWars;
 
+  const isOldThreshold = new Date();
+  isOldThreshold.setMonth(isOldThreshold.getMonth() - 3);
+
   // display allmovies list
   for (const element of movieList) {
-    if(element.isNew){
-      console.log(element.title + " -> THE LIST");
-      buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
+    var timeAdded = new Date(element.dateAdded.split('-'));
+    timeAdded.setMonth(timeAdded.getMonth() - 1);
+    if (+isOldThreshold <= +(timeAdded)){
+      buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, true);
     }
   }
   for (const element of movieList){
-    if(!element.isNew){
-      buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, element.isNew);
+    if (+isOldThreshold > +(timeAdded)){
+      buildScrollElement("allMoviesScroll", element.imdbCoverId, element.title, element.imdbLinkId, element.isStack, element.is3d, element.length, element.actors[0], element.actors[1], element.year, false);
     }
   };
 
