@@ -11,7 +11,9 @@ fetch("data/current.json").then(function (response) {
 }).then(function (currentObject) {
   if(currentObject.host != ""){
     document.getElementById("hostId").innerHTML = "[" + currentObject.host + "]";
+    alert("SET VISIBLE");
     document.getElementById("hostDisplay").style.visibility = "visible";
+
   }
 }).catch(function (error) {
   console.error(error);
@@ -177,7 +179,7 @@ function nextMovieDefault(){
 }
 
 function nextTimeDefault(){
-  document.getElementById("hostDisplay").style.visibility = "hidden";
+  //document.getElementById("hostDisplay").style.visibility = "hidden";
   document.getElementById("timer").innerHTML = "NICHTS GEPLANT";
   document.getElementById("cinemaAndTime").classList.remove("ani-accent-fade");
   document.getElementById('movieTime').innerHTML = " - - : - - ";
