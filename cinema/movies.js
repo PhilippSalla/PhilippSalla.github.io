@@ -11,7 +11,6 @@ fetch("data/current.json").then(function (response) {
 }).then(function (currentObject) {
   if(currentObject.host != ""){
     document.getElementById("hostId").innerHTML = "[" + currentObject.host + "]";
-    alert("SET VISIBLE");
     document.getElementById("hostDisplay").style.visibility = "visible";
 
   }
