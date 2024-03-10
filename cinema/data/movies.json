@@ -897,6 +897,20 @@
       ]
     },
     {
+      "title": "Oppenheimer",
+      "imdbLinkId": "tt15398776",
+      "imdbCoverId": "MV5BN2E2ZTk5Y2UtYWFjMi00NDgzLWEyN2QtYjhkOGYyN2QyOTZkXkEyXkFqcGdeQXVyNjkwOTQ4MDE@._V1_FMjpg_UX495_",
+      "is3d": false,
+      "isStack": false,
+      "dateAdded": "2024-03-04",
+      "year": 2023,
+      "length": 180,
+      "actors": [
+        "Cillian Murphy",
+        "Emily Blunt"
+      ]
+    },
+    {
       "title": "Parker",
       "imdbLinkId": "tt1904996",
       "imdbCoverId": "MV5BMzk3OWE3OGQtOTdiYS00ZWU2LWFkYTUtN2ExZjVlM2FjMmM1XkEyXkFqcGdeQXVyNjkwOTQ4MDE@._V1_FMjpg_UX600_",
@@ -908,6 +922,34 @@
       "actors": [
         "Jason Statham",
         "Jennifer Lopez"
+      ]
+    },
+    {
+      "title": "Pacific Rim",
+      "imdbLinkId": "tt1663662",
+      "imdbCoverId": "MV5BNzgzYjFjMzctM2EzNi00YzA2LWIxNGMtOWI4MTIxZTZiMTJjXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UX410_",
+      "is3d": false,
+      "isStack": false,
+      "dateAdded": "2024-03-04",
+      "year": 2013,
+      "length": 131,
+      "actors": [
+        "Idris Elba",
+        "Charlie Hunnam"
+      ]
+    },
+    {
+      "title": "Pacific Rim 2: Uprising",
+      "imdbLinkId": "tt2557478",
+      "imdbCoverId": "MV5BYTVlNzY0MzMtNDRiNS00Njk0LTgwNTItMTM4M2M1YmNjY2VkXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_FMjpg_UY3508_",
+      "is3d": false,
+      "isStack": false,
+      "dateAdded": "2024-03-04",
+      "year": 2018,
+      "length": 111,
+      "actors": [
+        "John Boyega",
+        "Scott Eastwood"
       ]
     },
     {
