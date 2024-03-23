@@ -175,6 +175,8 @@ function nextMovieDefault(){
     e.classList.add("opacity-fade");
     e.src = "https://i.giphy.com/media/oa4Au5xDZ6HJYF6KGH/giphy.webp";
   };
+  document.getElementById("topDetails").removeChild(document.getElementById("imgAndDecr"));
+  document.getElementById("nextMovie").classList.add("mar0a");
 }
 
 function nextTimeDefault(){

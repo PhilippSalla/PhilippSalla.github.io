@@ -45,6 +45,10 @@ img{
   width: 100%;
 }
 
+.mar0a{
+  margin: 0 auto;
+}
+
 /*
   top display
 */
@@ -97,6 +101,14 @@ img{
   flex-wrap: wrap;
 }
 
+.half-left{
+  width: 65%;
+}
+
+.half-right{
+  width: 35%;
+}
+
 .movie-card-small{
   padding: 0;
   margin-bottom: 0.25rem;
@@ -110,6 +122,7 @@ img{
 .movie-card-small img{
   aspect-ratio: 9/16;
   height: 10rem;
+  width: 7rem;
   object-fit: cover;
   background-color: var(--clr-dark);
   padding: 0;
@@ -117,7 +130,7 @@ img{
 
 .movie-small-title{
   word-wrap: break-word;
-  width: calc(100% - 5.625rem);
+  width: calc(90% - 5.625rem);
   padding: 0.75rem;
   padding-left: 2rem;
   text-align: left;
