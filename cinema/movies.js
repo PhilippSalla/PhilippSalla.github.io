@@ -158,7 +158,10 @@ function setUpTimer(movieDateTime){
 
     if (distance < -18013433) { // about 6 hours
       clearInterval(x);
-      document.getElementById("nextMovieImage").src = "";
+      var nmi = document.getElementById("nextMovieImage");
+      if (nmi){
+        nmi.src = "";
+      }
       nextMovieDefault();
       nextTimeDefault();
     }
@@ -166,18 +169,14 @@ function setUpTimer(movieDateTime){
 }
 
 function nextMovieDefault(){
-  document.getElementById("nextMovieTitle").innerHTML = "";
-  document.getElementById('nextMovieDetails').innerHTML = "Durchsuche die Liste nach einem Film deiner Wahl oder entscheide Vorort";
-  document.getElementById('nextMovieActors').innerHTML = "";
-  var e = document.getElementById("nextMovieImage");
-  e.src = 'https://cdn-icons-png.flaticon.com/512/2476/2476231.png';
-  e.onclick = function () {
-    e.classList.add("opacity-fade");
-    e.src = "https://i.giphy.com/media/oa4Au5xDZ6HJYF6KGH/giphy.webp";
-  };
-  document.getElementById("topDetails").removeChild(document.getElementById("imgAndDecr"));
   document.getElementById("nextMovie").classList.add("mar0a");
+  var td = document.getElementById("topDetails");
+  var iad = document.getElementById("imgAndDecr");
+  if (td && iad){
+    document.getElementById("topDetails").removeChild(iad);
+  }
 }
+
 
 function nextTimeDefault(){
   //document.getElementById("hostDisplay").style.visibility = "hidden";
