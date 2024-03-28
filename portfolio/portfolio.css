@@ -368,7 +368,7 @@ p{
 .lang-element-container{
   color: var(--clr-white);
   font-size: 1rem;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   border: 1px solid var(--clr-light);
@@ -421,29 +421,29 @@ p{
 
 .lang-bar-half{
   width: 25%;
-  color: var(--clr-light);
+  color: var(--clr-red);
 }
 
 .lang-bar-half > hr{
-  background-color: var(--clr-light);
+  background-color: var(--clr-red);
 }
 
 .lang-bar-lower{
   width: 12.5%;
-  color: var(--clr-red);
+  color: var(--clr-light);
 }
 
 .lang-bar-lower > hr{
-  background-color: var(--clr-red);
+  background-color: var(--clr-light);
 }
 
 .lang-bar-lowest {
   width: 7%;
-  color: var(--clr-red);
+  color: var(--clr-light);
 }
 
 .lang-bar-lowest > hr {
-  background-color: var(--clr-red);
+  background-color: var(--clr-light);
 }
 
 .lang-val{

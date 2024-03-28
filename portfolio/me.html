@@ -35,7 +35,7 @@
           (document.body.scrollTop > document.getElementById("langCssBar").getBoundingClientRect().top + 500 
           || document.documentElement.scrollTop > document.getElementById("langCssBar").getBoundingClientRect().top + 500)) {
           activatedLangFade = true;
-          array = ["Html", "Css", "Python", "Java", "Go", "Cpp", "C", "MySql", "Haskell", "Csharp", "Prolog", "Db2"];
+          array = ["Html", "Css", "Python", "Java", "Go", "Cpp", "C", "Sql", "Haskell", "Csharp", "Prolog", "DotNet"];
 
           document.getElementById("langDescr").classList.add("animate-opacity");
           document.getElementById("langDescr").classList.remove("op0");
@@ -205,119 +205,120 @@
             </div>
           </div>
 
-          <!-- C++ element -->
-          <div id="langJava" class="flex-element op0" style="--k:4">
+          <!-- C# element -->
+          <div id="langCsharp" class="flex-element op0" style="--k:4">
             <div class="lang-title">
-              C++
+              C#
             </div>
-            <div id="langJavaBar" class="lang-bar-upper" style="--i:4">
+            <div id="langCsharpBar" class="lang-bar-upper" style="--i:4">
               <hr class="bar">
             </div>
-            <div id="langJavaVal" class="" style="--j:4">
-              learning
-            </div>
-          </div>
-
-          <!-- Java element -->
-          <div id="langCpp" class="flex-element op0" style="--k:5">
-            <div class="lang-title">
-              Java
-            </div>
-            <div id="langCppBar" class="lang-bar-upper" style="--i:5">
-              <hr class="bar">
-            </div>
-            <div id="langCppVal" class="" style="--j:5">
+            <div id="langCsharpVal" class="" style="--j:4">
               decent
             </div>
           </div>
 
+          <!-- SQL element -->
+          <div id="langSql" class="flex-element op0" style="--k:5">
+            <div class="lang-title">
+              SQL
+            </div>
+            <div id="langSqlBar" class="lang-bar-upper" style="--i:5">
+              <hr class="bar">
+            </div>
+            <div id="langSqlVal" class="" style="--j:5">
+              decent
+            </div>
+          </div>
+
+          <!-- .NET element -->
+          <div id="langDotNet" class="flex-element op0" style="--k:6">
+            <div class="lang-title">
+              .NET
+            </div>
+            <div id="langDotNetBar" class="lang-bar-half" style="--i:6">
+              <hr class="bar">
+            </div>
+            <div id="langDotNetVal" class="" style="--j:6">
+              basic
+            </div>
+          </div>
+
+          <!-- Java element -->
+          <div id="langCpp" class="flex-element op0" style="--k:7">
+            <div class="lang-title">
+              Java
+            </div>
+            <div id="langCppBar" class="lang-bar-half" style="--i:7">
+              <hr class="bar">
+            </div>
+            <div id="langCppVal" class="" style="--j:7">
+              basic
+            </div>
+          </div>
+
+          <!-- C++ element -->
+          <div id="langJava" class="flex-element op0" style="--k:8">
+            <div class="lang-title">
+              C++
+            </div>
+            <div id="langJavaBar" class="lang-bar-lower" style="--i:8">
+              <hr class="bar">
+            </div>
+            <div id="langJavaVal" class="" style="--j:8">
+              learning
+            </div>
+          </div>
+
+
           <!-- Go element -->
-          <div id="langGo" class="flex-element op0" style="--k:6">
+          <div id="langGo" class="flex-element op0" style="--k:9">
             <div class="lang-title">
               Go
             </div>
-            <div id="langGoBar" class="lang-bar-half" style="--i:6">
+            <div id="langGoBar" class="lang-bar-lower" style="--i:9">
               <hr class="bar">
             </div>
-            <div id="langGoVal" class="" style="--j:6">
-              basic
+            <div id="langGoVal" class="" style="--j:9">
+              learning
             </div>
           </div>
 
           <!-- C element -->
-          <div id="langC" class="flex-element op0" style="--k:7">
+          <div id="langC" class="flex-element op0" style="--k:10">
             <div class="lang-title">
               C
             </div>
-            <div id="langCBar" class="lang-bar-half" style="--i:7">
+            <div id="langCBar" class="lang-bar-lower" style="--i:10">
               <hr class="bar">
             </div>
-            <div id="langCVal" class="" style="--j:7">
-              basic
+            <div id="langCVal" class="" style="--j:10">
+              learning
             </div>
           </div>
           
           <!-- Haskell element -->
-          <div id="langHaskell" class="flex-element op0" style="--k:8">
+          <div id="langHaskell" class="flex-element op0" style="--k:11">
             <div class="lang-title">
               Haskell
             </div>
-            <div id="langHaskellBar" class="lang-bar-lower" style="--i:8">
+            <div id="langHaskellBar" class="lang-bar-lowest" style="--i:11">
               <hr class="bar">
             </div>
-            <div id="langHaskellVal" class="" style="--j:8">
-              beginner
-            </div>
-          </div>
-
-          <!-- C# element -->
-          <div id="langCsharp" class="flex-element op0" style="--k:9">
-            <div class="lang-title">
-              C#
-            </div>
-            <div id="langCsharpBar" class="lang-bar-lowest" style="--i:9">
-              <hr class="bar">
-            </div>
-            <div id="langCsharpVal" class="" style="--j:9">
+            <div id="langHaskellVal" class="" style="--j:11">
               worked with
             </div>
           </div>
 
           <!-- Prolog element -->
-          <div id="langProlog" class="flex-element op0" style="--k:10">
+          <div id="langProlog" class="flex-element op0" style="--k:12">
             <div class="lang-title">
               Prolog
             </div>
-            <div id="langPrologBar" class="lang-bar-lowest" style="--i:10">
+            <div id="langPrologBar" class="lang-bar-lowest" style="--i:12">
               <hr class="bar">
             </div>
-            <div id="langPrologVal" class="" style="--j:10">
-              worked with
-            </div>
-          </div>
-
-          <!-- DB2 element -->
-          <div id="langDb2" class="flex-element op0" style="--k:11">
-            <div class="lang-title">
-              DB2 (IBM)
-            </div>
-            <div id="langDb2Bar" class="lang-bar-lowest" style="--i:11">
-              <hr class="bar">
-            </div>
-            <div id="langDb2Val" class="" style="--j:11">
-              worked with
-            </div>
-          </div>
-
-          <!-- MySQL element -->
-          <div id="langMySql" class="flex-element op0" style="--k:12">
-            <div class="lang-title">
-              MySQL
-            </div>
-            <div id="langMySqlBar" class="lang-bar-lowest" style="--i:12">
-              <hr class="bar">
-            </div>
-            <div id="langMySqlVal" class="" style="--j:12">
+            <div id="langPrologVal" class="" style="--j:12">
               worked with
             </div>
           </div>
